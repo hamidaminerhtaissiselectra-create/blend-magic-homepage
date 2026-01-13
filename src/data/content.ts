@@ -12,8 +12,9 @@ export const content = {
       address: "Paris, France",
     },
     social: {
-      linkedin: "#",
-      facebook: "#",
+      linkedin: "https://www.linkedin.com/company/hdconnect-securite",
+      facebook: "https://www.facebook.com/hdconnectsecurite",
+      instagram: "https://www.instagram.com/hdconnect_securite",
     },
   },
 

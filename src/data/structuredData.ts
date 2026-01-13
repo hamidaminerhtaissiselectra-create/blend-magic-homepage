@@ -17,8 +17,8 @@ export const organizationSchema = {
   "image": "https://hdconnect.fr/og-image.jpg",
   "description": "Expert français en installation de systèmes de sécurité : vidéosurveillance HD/4K, alarmes certifiées NF&A2P, contrôle d'accès biométrique, domotique. Intervention France entière.",
   "foundingDate": "2015",
-  "telephone": "+33627135304",
-  "email": "contact@hdconnect.fr",
+  "telephone": "+33 6 27 13 53 04",
+  "email": "kamal@hdconnect.fr",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Créteil",
@@ -28,9 +28,9 @@ export const organizationSchema = {
     "addressCountry": "FR"
   },
   "sameAs": [
-    "https://www.facebook.com/hdconnect",
-    "https://www.linkedin.com/company/hdconnect",
-    "https://twitter.com/HDConnectFR"
+    "https://www.facebook.com/hdconnectsecurite",
+    "https://www.linkedin.com/company/hdconnect-securite",
+    "https://www.instagram.com/hdconnect_securite"
   ],
   "contactPoint": [
     {
@@ -57,8 +57,8 @@ export const localBusinessSchema = {
   "name": "HD Connect - Sécurité et Domotique",
   "image": "https://hdconnect.fr/og-image.jpg",
   "url": "https://hdconnect.fr",
-  "telephone": "+33627135304",
-  "email": "contact@hdconnect.fr",
+  "telephone": "+33 6 27 13 53 04",
+  "email": "kamal@hdconnect.fr",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
