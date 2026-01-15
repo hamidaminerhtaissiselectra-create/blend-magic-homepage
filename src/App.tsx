@@ -13,6 +13,7 @@ import LegalPage from "./pages/LegalPage";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import CityPage from "./pages/villes/CityPage";
 import RegionPage from "./pages/regions/RegionPage";
+import ArrondissementPage from "./pages/paris/ArrondissementPage";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import ServicesHub from "./pages/ServicesHub";
@@ -58,6 +59,9 @@ const App = () => (
           
           {/* Pages villes - Niveau 4 */}
           <Route path="/villes/:citySlug" element={<CityPage />} />
+          
+          {/* Pages arrondissements Paris - Niveau 5 */}
+          <Route path="/paris/:arrondissementSlug" element={<ArrondissementPage />} />
           
           {/* Page Hub Services - Niveau 1 (Page Pivot) */}
           <Route path="/services" element={<ServicesHub />} />
