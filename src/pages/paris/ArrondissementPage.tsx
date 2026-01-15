@@ -1,4 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/useSEO";
@@ -10,6 +11,8 @@ import FAQAccordion from "@/components/FAQAccordion";
 import MiniTestimonials from "@/components/MiniTestimonials";
 import WhyHDConnect from "@/components/WhyHDConnect";
 import ExpertiseSection from "@/components/ExpertiseSection";
+import QuoteFunnelSimple from "@/components/QuoteFunnelSimple";
+import InterventionProcess from "@/components/InterventionProcess";
 import {
   MapPin,
   Phone,
@@ -28,8 +31,13 @@ import {
   AlertTriangle,
   Building2,
   CheckCircle,
+  Star,
+  BadgeCheck,
+  TrendingUp,
+  Target,
+  Sparkles,
 } from "lucide-react";
-import { getArrondissementBySlug, parisArrondissements, ArrondissementData } from "@/data/parisArrondissements";
+import { getArrondissementBySlug, parisArrondissements } from "@/data/parisArrondissements";
 import { usePhoneCall } from "@/hooks/usePhoneCall";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
@@ -71,36 +79,80 @@ const ArrondissementPage = () => {
       title: "Vidéosurveillance",
       description: `Installation caméras HD/4K dans le ${ordinalNumber} arrondissement. Surveillance commerces, copropriétés, bureaux.`,
       link: "/services/videosurveillance",
+      features: ["Caméras HD/4K", "Vision nocturne", "Accès mobile 24/7"],
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: ShieldAlert,
       title: "Alarmes",
       description: `Systèmes d'alarme certifiés NF&A2P pour ${arrondissement.quartiers[0]} et environs.`,
       link: "/services/alarme",
+      features: ["Certification NF&A2P", "Télésurveillance", "Anti-intrusion"],
+      color: "from-red-500 to-orange-500",
     },
     {
       icon: Lock,
       title: "Contrôle d'Accès",
       description: `Badges, biométrie, interphones vidéo pour immeubles et bureaux du ${ordinalNumber}.`,
       link: "/services/controle-acces",
+      features: ["Badges RFID", "Biométrie", "Interphone vidéo"],
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: Home,
       title: "Domotique",
       description: `Maison intelligente et automatisation sécurité dans le ${ordinalNumber} arrondissement.`,
       link: "/services/domotique",
+      features: ["Éclairage connecté", "Thermostat", "Volets automatiques"],
+      color: "from-purple-500 to-pink-500",
     },
     {
       icon: Wifi,
       title: "Réseau",
       description: `Infrastructure réseau professionnelle pour entreprises du ${ordinalNumber}.`,
       link: "/services/reseau",
+      features: ["WiFi 6E", "Câblage Cat 6A", "Firewall UTM"],
+      color: "from-indigo-500 to-blue-500",
     },
     {
       icon: Wrench,
       title: "Maintenance",
       description: `Maintenance préventive et dépannage 24/7 dans le ${ordinalNumber} arrondissement.`,
       link: "/services/maintenance",
+      features: ["Contrat annuel", "Intervention 24h", "Support 24/7"],
+      color: "from-amber-500 to-yellow-500",
+    },
+  ];
+
+  // Statistiques locales animées
+  const localStats = [
+    { value: arrondissement.population, label: "Habitants", icon: Users, suffix: "" },
+    { value: arrondissement.quartiers.length.toString(), label: "Quartiers", icon: Building2, suffix: "" },
+    { value: arrondissement.crimeRate.split("/")[0], label: "Taux criminalité", icon: Shield, suffix: "/1000" },
+    { value: "24", label: "Heures intervention", icon: Clock, suffix: "h" },
+  ];
+
+  // Avantages spécifiques arrondissement
+  const advantages = [
+    {
+      icon: MapPin,
+      title: "Connaissance Locale",
+      description: `Nos équipes connaissent parfaitement le ${ordinalNumber} : ${arrondissement.quartiers.slice(0, 2).join(", ")}...`,
+    },
+    {
+      icon: Zap,
+      title: "Intervention Express",
+      description: `Délai d'intervention garanti sous 24-48h dans tout le ${ordinalNumber} arrondissement.`,
+    },
+    {
+      icon: Award,
+      title: "Expertise Certifiée",
+      description: "Techniciens formés et certifiés par les plus grandes marques du secteur.",
+    },
+    {
+      icon: Target,
+      title: "Solutions Adaptées",
+      description: `Solutions sur mesure pour les spécificités du ${ordinalNumber} : ${arrondissement.priority === 'critique' ? 'secteur sensible' : 'quartier résidentiel'}.`,
     },
   ];
 
@@ -125,6 +177,10 @@ const ArrondissementPage = () => {
     {
       question: `Quels monuments ou lieux sensibles sécurisez-vous dans le ${ordinalNumber} ?`,
       answer: `Dans le ${ordinalNumber} arrondissement, nous sécurisons les commerces et résidences à proximité de ${arrondissement.landmarks.slice(0, 2).join(" et ")}. Notre expertise nous permet de proposer des solutions discrètes et efficaces.`,
+    },
+    {
+      question: `Les frais de déplacement sont-ils inclus dans le ${ordinalNumber} ?`,
+      answer: `Oui, les frais de déplacement sont inclus pour toutes nos interventions dans le ${ordinalNumber} arrondissement. Le devis que nous vous fournissons est global et transparent, sans frais cachés.`,
     },
   ];
 
@@ -156,6 +212,13 @@ const ArrondissementPage = () => {
       "worstRating": "1",
       "reviewCount": "127"
     },
+    "priceRange": "€€",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
     "serviceType": [
       "Installation vidéosurveillance",
       "Installation alarme",
@@ -183,149 +246,311 @@ const ArrondissementPage = () => {
     .filter(arr => arr.slug !== arrondissement.slug)
     .slice(0, 6);
 
+  // Framer Motion variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const floatingAnimation = {
+    y: [0, -10, 0],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-accent/5 relative overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-56 h-56 bg-accent/10 rounded-full blur-3xl"></div>
+      {/* Hero Section avec animations avancées */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-accent/5 relative overflow-hidden">
+        {/* Animated background elements */}
+        <motion.div 
+          className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 5, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute bottom-10 left-10 w-56 h-56 bg-accent/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
+          transition={{ duration: 7, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl"
+          animate={floatingAnimation}
+        />
 
         <div className="container mx-auto px-4 relative z-10">
           <Breadcrumbs items={breadcrumbItems} />
 
-          <div className="max-w-4xl mx-auto text-center mt-8">
-            <div className="flex flex-wrap justify-center gap-2 mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center mt-8"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            {/* Badges animés */}
+            <motion.div 
+              className="flex flex-wrap justify-center gap-2 mb-6"
+              variants={itemVariants}
+            >
+              <motion.span 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <MapPin className="w-4 h-4" />
                 Paris {ordinalNumber} (75{arrondissement.number.toString().padStart(2, '0')})
-              </span>
+              </motion.span>
               {arrondissement.priority === 'critique' && (
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-600 font-medium">
+                <motion.span 
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-600 font-medium border border-red-500/20 animate-pulse"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <AlertTriangle className="w-4 h-4" />
                   Secteur prioritaire
-                </span>
+                </motion.span>
               )}
-            </div>
+              <motion.span 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 text-amber-600 font-medium border border-amber-500/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Star className="w-4 h-4 fill-amber-500" />
+                4.9/5 avis clients
+              </motion.span>
+            </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Sécurité <span className="text-primary">{arrondissement.name}</span>
-            </h1>
+            {/* Titre animé */}
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              variants={itemVariants}
+            >
+              Sécurité <span className="text-gradient-animated">{arrondissement.name}</span>
+            </motion.h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
+            <motion.p 
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
+              variants={itemVariants}
+            >
               {arrondissement.description}
-            </p>
+            </motion.p>
 
-            {/* Stats locales */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-sm"><strong>{arrondissement.population}</strong> habitants</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border">
-                <Building2 className="w-5 h-5 text-primary" />
-                <span className="text-sm"><strong>{arrondissement.quartiers.length}</strong> quartiers</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border">
-                <Shield className="w-5 h-5 text-primary" />
-                <span className="text-sm">Taux criminalité : <strong>{arrondissement.crimeRate}</strong></span>
-              </div>
-            </div>
+            {/* Stats locales animées */}
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
+              variants={containerVariants}
+            >
+              {localStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="relative p-4 rounded-xl bg-card/80 backdrop-blur-sm border border-border hover:border-primary/30 transition-all group"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <stat.icon className="w-6 h-6 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <div className="text-2xl md:text-3xl font-bold text-foreground">
+                    {stat.value}{stat.suffix}
+                  </div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg px-8"
-                onClick={() => scrollToSection("quote", { mode: "quote" })}
-              >
-                Devis gratuit {ordinalNumber}
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                size="lg"
-                className="text-lg px-8 bg-primary/20 backdrop-blur-sm border-2 border-primary/50 hover:bg-primary/30 text-primary transition-all"
-                asChild
-              >
-                <a href={callUrl} target="_blank" rel="noopener noreferrer">
-                  <Phone className="mr-2 w-5 h-5" />
-                  {phoneNumber}
-                </a>
-              </Button>
-            </div>
-          </div>
+            {/* CTA Buttons animés */}
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={itemVariants}
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg px-8 shadow-xl hover:shadow-2xl transition-all"
+                  onClick={() => scrollToSection("quote", { mode: "quote" })}
+                >
+                  <Sparkles className="mr-2 w-5 h-5" />
+                  Devis gratuit {ordinalNumber}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  size="lg"
+                  className="text-lg px-8 bg-primary/20 backdrop-blur-sm border-2 border-primary/50 hover:bg-primary/30 text-primary transition-all"
+                  asChild
+                >
+                  <a href={callUrl} target="_blank" rel="noopener noreferrer">
+                    <Phone className="mr-2 w-5 h-5 animate-pulse" />
+                    {phoneNumber}
+                  </a>
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Quartiers couverts */}
-      <section className="py-12 bg-secondary/30">
+      {/* Quartiers couverts - avec badges interactifs */}
+      <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4">
+                <MapPin className="w-4 h-4" />
+                <span>Zone de couverture</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Quartiers du {ordinalNumber} Arrondissement
               </h2>
-              <p className="text-muted-foreground">
-                HD Connect intervient dans tous les quartiers du {ordinalNumber}
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                HD Connect intervient dans tous les quartiers du {ordinalNumber}. Nos techniciens connaissent parfaitement chaque secteur.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto mb-8">
             {arrondissement.quartiers.map((quartier, index) => (
               <AnimatedSection key={index} animation="scale-in" delay={index * 50}>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">
+                <motion.span 
+                  className="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-medium border border-primary/20 cursor-pointer"
+                  whileHover={{ scale: 1.1, backgroundColor: "hsl(var(--primary) / 0.2)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   {quartier}
-                </span>
+                </motion.span>
               </AnimatedSection>
             ))}
           </div>
 
           {/* Lieux remarquables */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground mb-3">Lieux remarquables à proximité :</p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {arrondissement.landmarks.map((landmark, index) => (
-                <span key={index} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm">
-                  {landmark}
-                </span>
-              ))}
+          <AnimatedSection animation="fade-up">
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground mb-4">Lieux remarquables à proximité :</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {arrondissement.landmarks.map((landmark, index) => (
+                  <motion.span 
+                    key={index} 
+                    className="px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium border border-accent/20"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {landmark}
+                  </motion.span>
+                ))}
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Avantages spécifiques */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-600 font-medium mb-4">
+                <CheckCircle className="w-4 h-4" />
+                <span>Nos atouts</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Pourquoi Choisir HD Connect dans le {ordinalNumber} ?
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {advantages.map((advantage, index) => (
+              <AnimatedSection key={index} animation="scale-in" delay={index * 100}>
+                <motion.div whileHover={{ y: -10 }}>
+                  <Card className="h-full border-border hover:border-primary/50 transition-all hover:shadow-xl">
+                    <CardContent className="p-6 text-center">
+                      <motion.div 
+                        className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4"
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                      >
+                        <advantage.icon className="w-7 h-7 text-primary" />
+                      </motion.div>
+                      <h3 className="font-bold text-foreground text-lg mb-2">{advantage.title}</h3>
+                      <p className="text-muted-foreground text-sm">{advantage.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid avec animations */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4">
+                <BadgeCheck className="w-4 h-4" />
+                <span>Solutions complètes</span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Nos Services dans le {ordinalNumber}
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Solutions de sécurité complètes pour particuliers et professionnels du {ordinalNumber} arrondissement
+                Solutions de sécurité professionnelles pour particuliers et entreprises du {ordinalNumber} arrondissement
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <AnimatedSection key={index} animation="scale-in" delay={index * 50}>
+              <AnimatedSection key={index} animation="scale-in" delay={index * 75}>
                 <Link to={service.link}>
-                  <Card className="hover-lift h-full border-border group cursor-pointer transition-all hover:border-primary/50">
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4">
-                        <service.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <h3 className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">{service.description}</p>
-                    </CardContent>
-                  </Card>
+                  <motion.div whileHover={{ y: -10 }}>
+                    <Card className="h-full border-border group cursor-pointer transition-all hover:border-primary/50 hover:shadow-xl overflow-hidden">
+                      <CardContent className="p-6 relative">
+                        {/* Gradient overlay on hover */}
+                        <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
+                        
+                        <motion.div 
+                          className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 shadow-lg`}
+                          whileHover={{ rotate: 5, scale: 1.1 }}
+                        >
+                          <service.icon className="w-7 h-7 text-white" />
+                        </motion.div>
+                        
+                        <h3 className="font-bold text-foreground text-xl mb-2 group-hover:text-primary transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
+                        
+                        {/* Features badges */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {service.features.map((feature, i) => (
+                            <span key={i} className="text-xs px-2 py-1 bg-secondary rounded-full text-muted-foreground">
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        {/* CTA */}
+                        <div className="flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">
+                          <span>En savoir plus</span>
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
                 </Link>
               </AnimatedSection>
             ))}
@@ -335,6 +560,9 @@ const ArrondissementPage = () => {
 
       {/* Section E-E-A-T Expertise */}
       <ExpertiseSection location={`Paris ${ordinalNumber}`} />
+
+      {/* Processus d'intervention */}
+      <InterventionProcess />
 
       {/* Pourquoi HD Connect */}
       <WhyHDConnect cityName={`Paris ${ordinalNumber}`} />
@@ -347,9 +575,16 @@ const ArrondissementPage = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up">
             <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4">
+                <TrendingUp className="w-4 h-4" />
+                <span>Questions fréquentes</span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Questions Fréquentes - {ordinalNumber} Arrondissement
+                FAQ - {ordinalNumber} Arrondissement
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Retrouvez les réponses aux questions les plus posées sur nos interventions dans le {ordinalNumber}
+              </p>
             </div>
           </AnimatedSection>
 
@@ -359,78 +594,123 @@ const ArrondissementPage = () => {
         </div>
       </section>
 
+      {/* Tunnel de devis */}
+      <QuoteFunnelSimple />
+
       {/* Autres arrondissements */}
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up">
-            <div className="text-center mb-8">
+            <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Autres Arrondissements de Paris
               </h2>
               <p className="text-muted-foreground">
-                HD Connect intervient dans tous les arrondissements parisiens
+                HD Connect intervient dans les 20 arrondissements parisiens
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {otherArrondissements.map((arr, index) => (
               <AnimatedSection key={index} animation="scale-in" delay={index * 50}>
                 <Link to={`/paris/${arr.slug}`}>
-                  <Card className="hover-lift text-center cursor-pointer transition-all hover:border-primary/50">
-                    <CardContent className="p-4">
-                      <div className="text-2xl font-bold text-primary mb-1">
-                        {arr.number === 1 ? "1er" : `${arr.number}e`}
-                      </div>
-                      <p className="text-xs text-muted-foreground truncate">{arr.quartiers[0]}</p>
-                    </CardContent>
-                  </Card>
+                  <motion.div whileHover={{ scale: 1.1, y: -5 }}>
+                    <Card className="text-center cursor-pointer transition-all hover:border-primary/50 hover:shadow-lg">
+                      <CardContent className="p-4">
+                        <div className="text-2xl font-bold text-primary mb-1">
+                          {arr.number === 1 ? "1er" : `${arr.number}e`}
+                        </div>
+                        <p className="text-xs text-muted-foreground truncate">{arr.quartiers[0]}</p>
+                        {arr.priority === 'critique' && (
+                          <span className="inline-block mt-1 text-[10px] px-1.5 py-0.5 bg-red-500/10 text-red-500 rounded-full">
+                            Prioritaire
+                          </span>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </motion.div>
                 </Link>
               </AnimatedSection>
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <Button asChild variant="outline" size="lg">
-              <Link to="/villes/paris">
-                <MapPin className="mr-2 w-5 h-5" />
-                Voir tous les arrondissements
-              </Link>
-            </Button>
-          </div>
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mt-10">
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Button asChild variant="outline" size="lg" className="group">
+                  <Link to="/villes/paris">
+                    <MapPin className="mr-2 w-5 h-5 group-hover:text-primary transition-colors" />
+                    Voir tous les arrondissements
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="container mx-auto px-4 text-center">
-          <Shield className="w-12 h-12 mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Sécurisez Votre {ordinalNumber} Arrondissement
-          </h2>
-          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-            Devis gratuit sous 24h pour votre projet de sécurité dans le {ordinalNumber} arrondissement de Paris
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 shadow-xl text-lg px-8"
-              onClick={() => scrollToSection("quote", { mode: "quote" })}
+      {/* CTA Final avec animations */}
+      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white relative overflow-hidden">
+        {/* Animated background */}
+        <motion.div 
+          className="absolute top-0 left-0 w-full h-full"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          <motion.div 
+            className="absolute top-10 right-20 w-32 h-32 bg-white/10 rounded-full blur-2xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.2, 1] }}
+            transition={{ duration: 5, repeat: Infinity }}
+          />
+          <motion.div 
+            className="absolute bottom-10 left-20 w-40 h-40 bg-white/5 rounded-full blur-3xl"
+            animate={{ y: [0, 20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 7, repeat: Infinity }}
+          />
+        </motion.div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <AnimatedSection animation="scale-in">
+            <motion.div
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             >
-              Demander un devis gratuit
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-primary text-lg px-8"
-              asChild
-            >
-              <a href={callUrl} target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 w-5 h-5" />
-                {phoneNumber}
-              </a>
-            </Button>
-          </div>
+              <Shield className="w-16 h-16 mx-auto mb-6" />
+            </motion.div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Sécurisez Votre {ordinalNumber} Arrondissement
+            </h2>
+            <p className="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+              Devis gratuit sous 24h pour votre projet de sécurité. Intervention rapide dans tout le {ordinalNumber}.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 shadow-2xl text-lg px-10 py-6"
+                  onClick={() => scrollToSection("quote", { mode: "quote" })}
+                >
+                  <Sparkles className="mr-2 w-5 h-5" />
+                  Demander un devis gratuit
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  size="lg"
+                  className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-primary text-lg px-10 py-6"
+                  asChild
+                >
+                  <a href={callUrl} target="_blank" rel="noopener noreferrer">
+                    <Phone className="mr-2 w-5 h-5" />
+                    {phoneNumber}
+                  </a>
+                </Button>
+              </motion.div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
