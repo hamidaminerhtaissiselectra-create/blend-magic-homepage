@@ -195,13 +195,39 @@
   <!-- NIVEAU 4 - PAGES VILLES (32 villes)       -->
   <!-- ========================================== -->
   
-  <!-- Île-de-France (6 villes) -->
+  <!-- Paris - Hub principal -->
   <url>
     <loc>https://hdconnect.fr/villes/paris</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
+  
+  <!-- ========================================== -->
+  <!-- NIVEAU 5 - ARRONDISSEMENTS PARIS (20)     -->
+  <!-- ========================================== -->
+  <url><loc>https://hdconnect.fr/paris/paris-1er-louvre</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-2e-bourse</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-3e-temple</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-4e-hotel-de-ville</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-5e-pantheon</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-6e-luxembourg</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-7e-palais-bourbon</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-8e-elysee</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-9e-opera</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-10e-enclos-saint-laurent</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-11e-popincourt</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-12e-reuilly</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-13e-gobelins</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-14e-observatoire</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-15e-vaugirard</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-16e-passy</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-17e-batignolles-monceau</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-18e-butte-montmartre</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-19e-buttes-chaumont</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hdconnect.fr/paris/paris-20e-menilmontant</loc><lastmod>2026-01-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Île-de-France (5 autres villes) -->
   <url>
     <loc>https://hdconnect.fr/villes/creteil</loc>
     <lastmod>2026-01-08</lastmod>

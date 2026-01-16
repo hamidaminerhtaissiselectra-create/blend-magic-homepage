@@ -14,6 +14,7 @@ import ZonesIntervention from "./pages/ZonesIntervention";
 import CityPage from "./pages/villes/CityPage";
 import RegionPage from "./pages/regions/RegionPage";
 import ArrondissementPage from "./pages/paris/ArrondissementPage";
+import ParisPage from "./pages/paris/ParisPage";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import ServicesHub from "./pages/ServicesHub";
@@ -59,6 +60,9 @@ const App = () => (
           
           {/* Pages villes - Niveau 4 */}
           <Route path="/villes/:citySlug" element={<CityPage />} />
+          
+          {/* Page Paris principale - Hub des arrondissements */}
+          <Route path="/villes/paris" element={<ParisPage />} />
           
           {/* Pages arrondissements Paris - Niveau 5 */}
           <Route path="/paris/:arrondissementSlug" element={<ArrondissementPage />} />
