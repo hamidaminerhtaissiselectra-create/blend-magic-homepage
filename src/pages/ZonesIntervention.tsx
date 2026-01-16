@@ -34,6 +34,21 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// Import des images locales des régions
+import ileDeFranceImg from "@/assets/regions/ile-de-france.jpg";
+import auvergneRhoneAlpesImg from "@/assets/regions/auvergne-rhone-alpes.jpg";
+import provenceAlpesCoteAzurImg from "@/assets/regions/provence-alpes-cote-d-azur.jpg";
+import nouvelleAquitaineImg from "@/assets/regions/nouvelle-aquitaine.jpg";
+import occitanieImg from "@/assets/regions/occitanie.jpg";
+import hautsDeFranceImg from "@/assets/regions/hauts-de-france.jpg";
+import grandEstImg from "@/assets/regions/grand-est.jpg";
+import paysDeLaLoireImg from "@/assets/regions/pays-de-la-loire.jpg";
+import bretagneImg from "@/assets/regions/bretagne.jpg";
+import normandieImg from "@/assets/regions/normandie.jpg";
+import bourgogneFrancheComteImg from "@/assets/regions/bourgogne-franche-comte.jpg";
+import centreValDeLoireImg from "@/assets/regions/centre-val-de-loire.jpg";
+import corseImg from "@/assets/regions/corse.jpg";
+
 const ZonesIntervention = () => {
   const { phoneNumber, callUrl } = usePhoneCall();
   const { scrollToSection } = useSmoothScroll();
@@ -348,21 +363,21 @@ const ZonesIntervention = () => {
           {/* Grille des régions avec photos */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {regionsData.map((region, index) => {
-              // Images emblématiques réelles des régions françaises
+              // Images emblématiques locales des régions françaises
               const regionImages: Record<string, string> = {
-                "ile-de-france": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=200&fit=crop", // Tour Eiffel Paris
-                "auvergne-rhone-alpes": "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=400&h=200&fit=crop", // Mont Blanc Alpes
-                "provence-alpes-cote-d-azur": "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=400&h=200&fit=crop", // Lavande Provence
-                "nouvelle-aquitaine": "https://images.unsplash.com/photo-1565793298220-78cbb9726cba?w=400&h=200&fit=crop", // Dune du Pilat
-                "occitanie": "https://images.unsplash.com/photo-1551279076-6887f0e0ed84?w=400&h=200&fit=crop", // Cité de Carcassonne
-                "hauts-de-france": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=400&h=200&fit=crop", // Beffrois Lille
-                "grand-est": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=200&fit=crop", // Cathédrale Strasbourg
-                "pays-de-la-loire": "https://images.unsplash.com/photo-1570102596-0e2c72ee0dbb?w=400&h=200&fit=crop", // Château de Nantes
-                "bretagne": "https://images.unsplash.com/photo-1599423300746-b62533397364?w=400&h=200&fit=crop", // Côte de granit rose
-                "normandie": "https://images.unsplash.com/photo-1597918374554-e9b58de73380?w=400&h=200&fit=crop", // Mont Saint-Michel
-                "bourgogne-franche-comte": "https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=400&h=200&fit=crop", // Vignobles Bourgogne
-                "centre-val-de-loire": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=400&h=200&fit=crop", // Château de Chambord
-                "corse": "https://images.unsplash.com/photo-1568786866903-6e7d622c5cc5?w=400&h=200&fit=crop" // Calanques de Piana Corse
+                "ile-de-france": ileDeFranceImg,
+                "auvergne-rhone-alpes": auvergneRhoneAlpesImg,
+                "provence-alpes-cote-d-azur": provenceAlpesCoteAzurImg,
+                "nouvelle-aquitaine": nouvelleAquitaineImg,
+                "occitanie": occitanieImg,
+                "hauts-de-france": hautsDeFranceImg,
+                "grand-est": grandEstImg,
+                "pays-de-la-loire": paysDeLaLoireImg,
+                "bretagne": bretagneImg,
+                "normandie": normandieImg,
+                "bourgogne-franche-comte": bourgogneFrancheComteImg,
+                "centre-val-de-loire": centreValDeLoireImg,
+                "corse": corseImg
               };
               
               // Couleurs par région
