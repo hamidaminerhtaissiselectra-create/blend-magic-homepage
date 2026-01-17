@@ -50,7 +50,7 @@ const Contact = () => {
       const { supabaseClient } = await import("@/lib/supabase");
       
       const { data: requestData, error: insertError } = await supabaseClient
-        .from('customer_requests')
+        .from('customer_requests' as never)
         .insert([
           {
             name: validatedData.name,
@@ -60,7 +60,7 @@ const Contact = () => {
             request_type: requestType,
             status: 'new',
           }
-        ])
+        ] as never)
         .select();
 
       if (insertError) {

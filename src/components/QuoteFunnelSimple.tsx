@@ -184,7 +184,7 @@ const QuoteFunnelSimple = () => {
       const { supabaseClient } = await import("@/lib/supabase");
       
       const { error: insertError } = await supabaseClient
-        .from('customer_requests')
+        .from('customer_requests' as never)
         .insert([
           {
             name: formData.name,
@@ -194,7 +194,7 @@ const QuoteFunnelSimple = () => {
             request_type: requestType === 'intervention' ? 'emergency' : 'quote',
             status: 'new',
           }
-        ]);
+        ] as never);
 
       if (insertError) {
         console.error('Erreur Supabase lors de l\'insertion:', insertError);
