@@ -45,41 +45,25 @@ const Contact = () => {
         info: 'Information',
         emergency: 'Urgence'
       };
-      
-      // 1. Enregistrement dans Supabase
-      const { supabaseClient } = await import("@/lib/supabase");
-      
-      const { data: requestData, error: insertError } = await supabaseClient
-        .from('customer_requests' as never)
-        .insert([
-          {
-            name: validatedData.name,
-            email: validatedData.email,
-            phone: validatedData.phone,
-            message: validatedData.message,
-            request_type: requestType,
-            status: 'new',
-          }
-        ] as never)
-        .select();
 
-      if (insertError) {
-        console.error('Erreur Supabase lors de l\'insertion:', insertError);
-        throw new Error('Erreur lors de l\'enregistrement de la demande.');
-      }
+      // Envoi vers Formspree
+      const response = await fetch('https://formspree.io/f/mwpzrqyl', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: validatedData.name,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          message: validatedData.message,
+          request_type: typeLabels[requestType],
+          _subject: `Nouvelle demande ${typeLabels[requestType]} - HDConnect`,
+        }),
+      });
 
-      // 2. Envoi de l'email de confirmation via edge function
-      try {
-        await supabaseClient.functions.invoke('send-quote-email', {
-          body: {
-            confirmationOnly: true,
-            clientName: validatedData.name,
-            clientEmail: validatedData.email,
-            requestType: typeLabels[requestType],
-          }
-        });
-      } catch (emailError) {
-        console.error('Erreur envoi email:', emailError);
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi du formulaire.');
       }
 
       toast({

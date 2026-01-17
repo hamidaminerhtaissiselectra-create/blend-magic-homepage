@@ -180,39 +180,25 @@ const QuoteFunnelSimple = () => {
       detailedMessage += `\nAdresse: ${formData.address}`;
       if (formData.message) detailedMessage += `\n\nMessage supplémentaire:\n${formData.message}`;
 
-      // Envoi vers Supabase
-      const { supabaseClient } = await import("@/lib/supabase");
-      
-      const { error: insertError } = await supabaseClient
-        .from('customer_requests' as never)
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            message: detailedMessage,
-            request_type: requestType === 'intervention' ? 'emergency' : 'quote',
-            status: 'new',
-          }
-        ] as never);
+      // Envoi vers Formspree
+      const response = await fetch('https://formspree.io/f/mwpzrqyl', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          message: detailedMessage,
+          request_type: requestType === 'quote' ? 'Devis' : 'Intervention',
+          _subject: `Nouvelle demande ${requestType === 'quote' ? 'Devis' : 'Intervention'} - HDConnect`,
+        }),
+      });
 
-      if (insertError) {
-        console.error('Erreur Supabase lors de l\'insertion:', insertError);
-        throw new Error('Erreur lors de l\'enregistrement de la demande.');
-      }
-
-      // Envoi de l'email de confirmation via edge function
-      try {
-        await supabaseClient.functions.invoke('send-quote-email', {
-          body: {
-            confirmationOnly: true,
-            clientName: formData.name,
-            clientEmail: formData.email,
-            requestType: requestType === 'quote' ? 'Devis' : 'Intervention',
-          }
-        });
-      } catch (emailError) {
-        console.error('Erreur envoi email:', emailError);
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi du formulaire.');
       }
 
       toast({
