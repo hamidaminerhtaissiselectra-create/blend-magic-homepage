@@ -52,7 +52,7 @@ const Admin = () => {
   const fetchRequests = async () => {
     try {
       const { data, error } = await supabaseClient
-        .from('customer_requests' as never)
+        .from('customer_requests')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -72,8 +72,8 @@ const Admin = () => {
   const updateRequestStatus = async (requestId: string, newStatus: RequestStatus) => {
     try {
       const { error } = await supabaseClient
-        .from('customer_requests' as never)
-        .update({ status: newStatus } as never)
+        .from('customer_requests')
+        .update({ status: newStatus })
         .eq('id', requestId);
 
       if (error) throw error;
