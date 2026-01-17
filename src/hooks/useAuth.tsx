@@ -13,26 +13,27 @@ export const useAuth = () => {
 
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabaseClient.auth.onAuthStateChange(
-      async (event, session) => {
+      (event, session) => {
         if (!mounted) return;
         
-        setLoading(true);
         setSession(session);
         setUser(session?.user ?? null);
         
-        // Check admin role synchronously
+        // Check admin role with setTimeout to avoid deadlock
         if (session?.user) {
-          const { data } = await supabaseClient
-            .from('user_roles')
-            .select('role')
-            .eq('user_id', session.user.id)
-            .eq('role', 'admin')
-            .maybeSingle();
-          
-          if (mounted) {
-            setIsAdmin(!!data);
-            setLoading(false);
-          }
+          setTimeout(async () => {
+            const { data } = await supabaseClient
+              .from('user_roles' as never)
+              .select('role')
+              .eq('user_id', session.user.id)
+              .eq('role', 'admin')
+              .maybeSingle();
+            
+            if (mounted) {
+              setIsAdmin(!!data);
+              setLoading(false);
+            }
+          }, 0);
         } else {
           setIsAdmin(false);
           setLoading(false);
@@ -49,7 +50,7 @@ export const useAuth = () => {
       
       if (session?.user) {
         const { data } = await supabaseClient
-          .from('user_roles')
+          .from('user_roles' as never)
           .select('role')
           .eq('user_id', session.user.id)
           .eq('role', 'admin')

@@ -52,12 +52,12 @@ const Admin = () => {
   const fetchRequests = async () => {
     try {
       const { data, error } = await supabaseClient
-        .from('customer_requests')
+        .from('customer_requests' as never)
         .select('*')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setRequests(data || []);
+      setRequests((data as CustomerRequest[]) || []);
     } catch (error) {
       toast({
         title: 'Erreur',
@@ -72,8 +72,8 @@ const Admin = () => {
   const updateRequestStatus = async (requestId: string, newStatus: RequestStatus) => {
     try {
       const { error } = await supabaseClient
-        .from('customer_requests')
-        .update({ status: newStatus })
+        .from('customer_requests' as never)
+        .update({ status: newStatus } as never)
         .eq('id', requestId);
 
       if (error) throw error;
