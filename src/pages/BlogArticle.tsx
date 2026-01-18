@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useSEO } from "@/hooks/useSEO";
@@ -25,6 +26,12 @@ import {
   Linkedin,
   User
 } from "lucide-react";
+
+/**
+ * SECURITY NOTE: Blog content is currently static and hardcoded in blogData.ts.
+ * If blog content is ever sourced from a database or user input, ensure proper
+ * sanitization continues to be applied via DOMPurify.
+ */
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -181,12 +188,18 @@ const BlogArticle = () => {
                 <div 
                   className="text-foreground leading-relaxed"
                   dangerouslySetInnerHTML={{ 
-                    __html: article.content
-                      .replace(/## /g, '<h2 class="text-2xl font-bold text-foreground mt-8 mb-4">')
-                      .replace(/### /g, '<h3 class="text-xl font-semibold text-foreground mt-6 mb-3">')
-                      .replace(/\n\n/g, '</p><p class="text-muted-foreground mb-4">')
-                      .replace(/\n- /g, '</p><li class="text-muted-foreground ml-4">')
-                      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>')
+                    __html: DOMPurify.sanitize(
+                      article.content
+                        .replace(/## /g, '<h2 class="text-2xl font-bold text-foreground mt-8 mb-4">')
+                        .replace(/### /g, '<h3 class="text-xl font-semibold text-foreground mt-6 mb-3">')
+                        .replace(/\n\n/g, '</p><p class="text-muted-foreground mb-4">')
+                        .replace(/\n- /g, '</p><li class="text-muted-foreground ml-4">')
+                        .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>'),
+                      { 
+                        ALLOWED_TAGS: ['h2', 'h3', 'p', 'li', 'strong', 'em', 'a', 'ul', 'ol', 'br'],
+                        ALLOWED_ATTR: ['class', 'href', 'target', 'rel']
+                      }
+                    )
                   }} 
                 />
               </article>
