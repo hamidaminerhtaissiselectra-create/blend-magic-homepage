@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { motion } from "framer-motion";
-import homeInstallationImage from "@/assets/home-installation-tech.jpg";
-import homeDepannageImage from "@/assets/home-depannage-urgence.jpg";
-import homeLocationImage from "@/assets/home-location-event.jpg";
+import homeInstallationImage from "@/assets/home-installation-tech.webp";
+import homeDepannageImage from "@/assets/home-depannage-urgence.webp";
+import homeLocationImage from "@/assets/home-location-event.webp";
 
 const services = [
   {
@@ -15,7 +15,7 @@ const services = [
     description: "Nous installons vos systèmes de sécurité avec expertise et rigueur. Étude gratuite, installation discrète et mise en service complète.",
     features: [
       "Étude de site gratuite et personnalisée",
-      "Installation rapide sous 48h",
+      "Installation rapide rapidement",
       "Configuration et formation incluses",
       "Garantie 5 ans pièces et main d'œuvre"
     ],
@@ -28,7 +28,7 @@ const services = [
     title: "Dépannage Express 24/7",
     description: "Panne, dysfonctionnement ou urgence ? Notre équipe intervient rapidement pour remettre votre système en état de fonctionnement.",
     features: [
-      "Intervention sous 4h en urgence",
+      "Intervention Rapide en urgence",
       "Disponible 24h/24, 7j/7",
       "Diagnostic gratuit par téléphone",
       "Techniciens certifiés et équipés"
@@ -144,9 +144,9 @@ const ServicesHighlight = () => {
         {/* Bottom Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {[
-            { icon: Clock, value: "4h", label: "Délai d'intervention urgence", color: "from-orange-500/20 to-amber-500/20 border-orange-500/30", iconColor: "text-orange-500" },
+            { icon: Clock, value: "Urgence", label: "Délai d'intervention urgence", color: "from-orange-500/20 to-amber-500/20 border-orange-500/30", iconColor: "text-orange-500" },
             { icon: Shield, value: "5 ans", label: "Garantie équipements", color: "from-green-500/20 to-emerald-500/20 border-green-500/30", iconColor: "text-green-500" },
-            { icon: Settings, value: "48h", label: "Installation express", color: "from-blue-500/20 to-cyan-500/20 border-blue-500/30", iconColor: "text-blue-500" },
+            { icon: Settings, value: "Urgence", label: "Installation express", color: "from-blue-500/20 to-cyan-500/20 border-blue-500/30", iconColor: "text-blue-500" },
             { icon: Wrench, value: "24/7", label: "Support technique", color: "from-violet-500/20 to-purple-500/20 border-violet-500/30", iconColor: "text-violet-500" },
           ].map((stat, index) => (
             <motion.div 

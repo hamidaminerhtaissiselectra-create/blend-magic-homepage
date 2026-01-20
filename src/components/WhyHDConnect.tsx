@@ -47,8 +47,8 @@ const WhyHDConnect = ({ cityName, regionName }: WhyHDConnectProps) => {
 
   // Engagements concrets
   const commitments = [
-    { icon: Zap, label: "Devis sous 24h", description: "Réponse rapide garantie" },
-    { icon: Clock, label: "Intervention 24-48h", description: "Techniciens de proximité" },
+    { icon: Zap, label: "Devis rapidement", description: "Réponse rapide garantie" },
+    { icon: Clock, label: "Intervention Rapide", description: "Techniciens de proximité" },
     { icon: Award, label: "Garantie 5 ans", description: "Pièces et main d'œuvre" },
     { icon: Phone, label: "Support 24/7", description: "Assistance téléphonique" },
     { icon: Shield, label: "Certifié NF&A2P", description: "Reconnu assurances" },

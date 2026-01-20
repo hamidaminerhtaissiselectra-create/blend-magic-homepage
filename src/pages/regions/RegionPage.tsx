@@ -55,9 +55,9 @@ const RegionPage = () => {
   const regionCities = getCitiesByRegion(region.name);
 
   useSEO({
-    title: `Installation Sécurité ${region.name} | Vidéosurveillance, Alarme | HD Connect`,
-    description: region.seoDescription,
-    keywords: `sécurité ${region.name}, vidéosurveillance ${region.name}, alarme ${region.name}, installation caméra, HD Connect`,
+    title: `Expert Sécurité 2025-2026 ${region.name} | Vidéosurveillance & Alarme IA | HD Connect`,
+    description: `${region.seoDescription} Solutions de sécurité intelligentes 2025-2026 en ${region.name}. Installation vidéosurveillance 4K et alarme NF&A2P rapidement.`,
+    keywords: `sécurité ${region.name} 2025-2026, vidéosurveillance ${region.name}, alarme ${region.name}, installation caméra IA, HD Connect, expert sécurité ${region.name}`,
     canonicalUrl: `https://hdconnect.fr/zones-intervention/${region.slug}`,
   });
 
@@ -190,7 +190,7 @@ const RegionPage = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Installation Sécurité en <span className="text-primary">{region.name}</span>
+              Expert Sécurité 2025-2026 en <span className="text-primary">{region.name}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle, ArrowRight, Play } from "lucide-react";
 import { content } from "@/data/content";
-import heroImage from "@/assets/hero-security.jpg";
+import heroImage from "@/assets/hero-security.webp";
 import { useEffect, useState } from "react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
@@ -18,11 +18,11 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const trustBadges = [
-    { label: "Installation sous 48h", icon: CheckCircle },
-    { label: "Support 24h/24 7j/7", icon: CheckCircle },
-    { label: "Garantie 5 ans", icon: CheckCircle },
-  ];
+	  const trustBadges = [
+	    { label: "Intervention Rapide 4h", icon: CheckCircle },
+	    { label: "Systèmes IA 2025-2026", icon: CheckCircle },
+	    { label: "Garantie 5 ans & NF&A2P", icon: CheckCircle },
+	  ];
 
   return (
     <section id="accueil" className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="HD Connect - Solutions de sécurité professionnelles" 
+          alt="Expert en sécurité HD Connect installant un système de vidéosurveillance et d'alarme intelligente pour une protection professionnelle 2025-2026" 
           className="w-full h-full object-cover transition-transform duration-100"
           style={{ transform: `scale(1.1) translateY(${scrollY * 0.15}px)` }}
         />
@@ -55,18 +55,17 @@ const Hero = () => {
             className={`badge-primary mb-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             <Shield className="w-5 h-5" />
-            <span>Expert en Sécurité depuis 10 ans en Île-de-France</span>
+            <span>Leader Sécurité 2025-2026 en Île-de-France</span>
           </div>
 
           {/* Main Heading with staggered animation */}
           <h1 
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1] text-center md:text-left transition-all duration-700 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Protégez votre{" "}
-            <span className="text-gradient-animated">entreprise</span>
-            <br />
-            et votre{" "}
-            <span className="text-gradient-animated" style={{ animationDelay: '0.5s' }}>domicile</span>
+            Votre Sécurité, Notre Priorité N°1 en 2025-2026 :{" "}
+            <span className="text-gradient-animated">Vidéosurveillance</span>,{" "}
+            <span className="text-gradient-animated" style={{ animationDelay: '0.5s' }}>Alarme</span> &{" "}
+            <span className="text-gradient-animated" style={{ animationDelay: '1s' }}>Domotique IA</span>
           </h1>
 
           {/* Subtitle */}

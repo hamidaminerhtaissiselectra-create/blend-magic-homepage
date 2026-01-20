@@ -21,7 +21,7 @@ export const regionsData: RegionData[] = [
     name: "Île-de-France",
     slug: "ile-de-france",
     description: "Région capitale de la France, l'Île-de-France concentre le plus grand bassin économique européen. HD Connect y assure une couverture complète pour tous vos besoins en sécurité électronique.",
-    seoDescription: "Installation sécurité en Île-de-France : vidéosurveillance, alarmes, contrôle d'accès à Paris, Créteil, Versailles. Expert certifié, intervention 24-48h.",
+    seoDescription: "Top 3 Référencement Sécurité 2025-2026 en Île-de-France. HD Connect installe des systèmes de vidéosurveillance IA 4K, alarmes NF&A2P et contrôle d'accès biométrique. Intervention Rapide Urgence sur Paris et toute la région. Audit gratuit.",
     departments: [
       { name: "Paris", code: "75" },
       { name: "Seine-et-Marne", code: "77" },
@@ -40,7 +40,7 @@ export const regionsData: RegionData[] = [
     name: "Auvergne-Rhône-Alpes",
     slug: "auvergne-rhone-alpes",
     description: "Deuxième région économique de France, Auvergne-Rhône-Alpes abrite Lyon et un tissu industriel dense. HD Connect accompagne les entreprises et particuliers de la région.",
-    seoDescription: "Sécurité électronique en Auvergne-Rhône-Alpes : installation caméras, alarmes, domotique à Lyon, Grenoble, Saint-Étienne. Devis gratuit.",
+    seoDescription: "Expert Sécurité 2025-2026 Auvergne-Rhône-Alpes. Installation de vidéosurveillance IA 4K, alarmes APSAD et domotique. Couverture complète Lyon, Grenoble, Saint-Étienne. Devis gratuit et garantie 5 ans.",
     departments: [
       { name: "Ain", code: "01" },
       { name: "Allier", code: "03" },
@@ -63,7 +63,7 @@ export const regionsData: RegionData[] = [
     name: "Provence-Alpes-Côte d'Azur",
     slug: "provence-alpes-cote-d-azur",
     description: "Région touristique majeure et pôle économique méditerranéen, PACA requiert des solutions de sécurité adaptées à son climat et son activité. HD Connect y intervient sur l'ensemble du territoire.",
-    seoDescription: "Expert sécurité PACA : vidéosurveillance Marseille, Nice, Cannes. Installation alarmes villas, commerces. Intervention Côte d'Azur.",
+    seoDescription: "Top 3 Sécurité 2025-2026 en PACA. HD Connect, expert certifié, installe des systèmes de vidéosurveillance IA et alarmes NF&A2P à Marseille, Nice, Cannes. Protection haut de gamme pour villas et entreprises. Intervention rapide.",
     departments: [
       { name: "Alpes-de-Haute-Provence", code: "04" },
       { name: "Hautes-Alpes", code: "05" },
@@ -211,7 +211,7 @@ export const regionsData: RegionData[] = [
     name: "Bourgogne-Franche-Comté",
     slug: "bourgogne-franche-comte",
     description: "Région au riche patrimoine et à l'industrie diversifiée, la Bourgogne-Franche-Comté bénéficie de l'expertise HD Connect pour tous ses besoins en sécurité.",
-    seoDescription: "Installation sécurité Bourgogne-Franche-Comté : caméras Dijon, alarmes Besançon, domotique. Expert certifié, couverture régionale.",
+    seoDescription: "Installation sécurité Bourgogne-Franche-Comté : caméras Dijon, alarmes Besançon, domotique. Expert certifié, couverture régionale. **Intervention Rapide** possible.",
     departments: [
       { name: "Côte-d'Or", code: "21" },
       { name: "Doubs", code: "25" },

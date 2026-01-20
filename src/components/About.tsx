@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { content } from "@/data/content";
 import { Award, Users, Clock, Shield, Zap, ThumbsUp } from "lucide-react";
-import aboutTeamImage from "@/assets/about-team.jpg";
+import aboutTeamImage from "@/assets/about-team.webp";
 import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useParallax";
 import { useEffect, useState } from "react";
 

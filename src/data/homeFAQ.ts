@@ -6,7 +6,7 @@ import { FAQItem } from "@/components/FAQAccordion";
 export const homeFAQItems: FAQItem[] = [
   {
     question: "Combien coûte l'installation d'un système de vidéosurveillance ?",
-    answer: "Le coût d'installation d'un système de vidéosurveillance varie entre 800€ et 3500€ selon le nombre de caméras, la qualité (HD ou 4K), et les fonctionnalités (vision nocturne, détection IA). HD Connect propose un devis gratuit personnalisé sous 24h avec des solutions adaptées à tous les budgets."
+    answer: "Le coût d'installation d'un système de vidéosurveillance varie entre 800€ et 3500€ selon le nombre de caméras, la qualité (HD ou 4K), et les fonctionnalités (vision nocturne, détection IA). HD Connect propose un devis gratuit personnalisé rapidement avec des solutions adaptées à tous les budgets."
   },
   {
     question: "Quelle est la différence entre une alarme certifiée NF&A2P et une alarme standard ?",
@@ -14,7 +14,7 @@ export const homeFAQItems: FAQItem[] = [
   },
   {
     question: "HD Connect intervient-il partout en France ?",
-    answer: "Oui, HD Connect intervient sur toute la France métropolitaine. Nos techniciens se déplacent dans les 24 à 48h pour les installations programmées. Pour les urgences en Île-de-France, nous pouvons intervenir le jour même. Les frais de déplacement sont généralement inclus dans le devis."
+    answer: "Oui, HD Connect intervient sur toute la France métropolitaine. Nos techniciens se déplacent dans les rapidement pour les installations programmées. Pour les urgences en Île-de-France, nous pouvons intervenir le jour même. Les frais de déplacement sont généralement inclus dans le devis."
   },
   {
     question: "Peut-on surveiller ses caméras à distance depuis un smartphone ?",

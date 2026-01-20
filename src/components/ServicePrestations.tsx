@@ -13,13 +13,13 @@ const prestations = [
     icon: Settings,
     title: "Installation Professionnelle",
     description: "Installation complète par nos techniciens certifiés avec mise en service et formation.",
-    features: ["Étude de site gratuite", "Installation sous 48h", "Configuration incluse", "Garantie 5 ans"],
+    features: ["Étude de site gratuite", "Installation rapidement", "Configuration incluse", "Garantie 5 ans"],
   },
   {
     icon: Wrench,
     title: "Dépannage Express",
     description: "Intervention rapide en cas de panne ou dysfonctionnement de vos équipements.",
-    features: ["Intervention sous 4h", "Disponible 24/7", "Diagnostic gratuit", "Pièces d'origine"],
+    features: ["Intervention Rapide", "Disponible 24/7", "Diagnostic gratuit", "Pièces d'origine"],
   },
   {
     icon: Package,

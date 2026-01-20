@@ -57,7 +57,7 @@ const GlobalFloatingCTA = () => {
               {/* Header */}
               <div className="text-center pb-2 border-b border-border">
                 <p className="text-xs text-primary font-semibold uppercase tracking-wider">Contact Rapide</p>
-                <p className="text-muted-foreground text-sm mt-1">Réponse sous 24h garantie</p>
+                <p className="text-muted-foreground text-sm mt-1">Réponse rapidement garantie</p>
               </div>
 
               {/* Bouton Devis Gratuit */}

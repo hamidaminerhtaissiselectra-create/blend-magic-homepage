@@ -18,9 +18,9 @@ import HomeCTALinks from "@/components/HomeCTALinks";
 const Index = () => {
   // SEO optimisé pour la page d'accueil
   useSEO({
-    title: "HD Connect | Sécurité Vidéosurveillance Alarme France",
-    description: "Expert installation vidéosurveillance, alarmes et contrôle d'accès en France. Devis gratuit, intervention 24h/24. Particuliers et professionnels.",
-    keywords: "sécurité, vidéosurveillance, alarme, contrôle accès, installation, France, HD Connect",
+    title: "HD Connect | Expert Sécurité 2025-2026 : Vidéosurveillance, Alarme & Domotique IA",
+    description: "Leader en installation de systèmes de sécurité intelligents 2025-2026. Vidéosurveillance 4K, alarme NF&A2P et domotique IA pour particuliers et entreprises en France.",
+    keywords: "expert sécurité 2025-2026, installation vidéosurveillance France, alarme intelligente IA, domotique maison connectée, HD Connect, sécurité électronique professionnelle",
     canonicalUrl: "https://hdconnect.fr/",
   });
 

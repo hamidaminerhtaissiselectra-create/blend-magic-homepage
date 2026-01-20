@@ -239,7 +239,7 @@ const Contact = () => {
               
               {/* Trust text */}
               <p className="text-center text-sm text-muted-foreground mt-4">
-                ✓ Sans engagement • ✓ Réponse sous 24h • ✓ Données sécurisées
+                ✓ Sans engagement • ✓ Réponse rapidement • ✓ Données sécurisées
               </p>
             </form>
           </CardContent>
@@ -278,7 +278,7 @@ const Contact = () => {
               <a href={`mailto:${companyInfo.email}`} className="text-primary font-bold text-base hover:underline break-all block">
                 {companyInfo.email}
               </a>
-              <p className="text-xs text-muted-foreground mt-2">Réponse sous 24h</p>
+              <p className="text-xs text-muted-foreground mt-2">Réponse rapidement</p>
             </CardContent>
           </Card>
 

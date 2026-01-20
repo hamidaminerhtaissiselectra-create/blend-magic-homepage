@@ -48,7 +48,7 @@ const variantData = {
   maintenance: {
     title: "Nos Engagements",
     items: [
-      { title: "Réactivité", description: "Intervention sous 4h en urgence, 24h en standard sur toute la France" },
+      { title: "Réactivité", description: "Intervention Rapide en urgence, 24h en standard sur toute la France" },
       { title: "Multi-marques", description: "Techniciens formés sur toutes les marques du marché" },
       { title: "Contrats flexibles", description: "Formules adaptées à vos besoins : préventif, correctif, tout inclus" },
     ]

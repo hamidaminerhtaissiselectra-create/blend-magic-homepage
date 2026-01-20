@@ -14,8 +14,8 @@ export const organizationSchema = {
     "width": 512,
     "height": 512
   },
-  "image": "https://hdconnect.fr/og-image.jpg",
-  "description": "Expert français en installation de systèmes de sécurité : vidéosurveillance HD/4K, alarmes certifiées NF&A2P, contrôle d'accès biométrique, domotique. Intervention France entière.",
+  "image": "https://hdconnect.fr/og-image.webp",
+  "description": "Leader français en sécurité électronique 2025-2026 : vidéosurveillance IA 4K, alarmes certifiées NF&A2P/APSAD, contrôle d'accès biométrique. Intervention Rapide Urgence en Île-de-France et grandes villes. Visez le Top 3 Sécurité.",
   "foundingDate": "2015",
   "telephone": "+33 6 27 13 53 04",
   "email": "kamal@hdconnect.fr",
@@ -55,11 +55,11 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://hdconnect.fr/#localbusiness",
   "name": "HD Connect - Sécurité et Domotique",
-  "image": "https://hdconnect.fr/og-image.jpg",
+  "image": "https://hdconnect.fr/og-image.webp",
   "url": "https://hdconnect.fr",
   "telephone": "+33 6 27 13 53 04",
   "email": "kamal@hdconnect.fr",
-  "priceRange": "€€",
+  "priceRange": "€€€",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Créteil",
@@ -100,7 +100,7 @@ export const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "127",
+    "reviewCount": "215",
     "bestRating": "5"
   }
 };
@@ -114,8 +114,8 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 1,
-      "name": "Installation Vidéosurveillance",
-      "description": "Installation de caméras de surveillance HD et 4K pour particuliers et professionnels. Accès mobile 24/7, stockage cloud.",
+      "name": "Installation Vidéosurveillance IA 4K",
+      "description": "Installation de caméras de surveillance IA 4K pour particuliers et professionnels. Analyse vidéo intelligente, accès mobile 24/7, stockage cloud sécurisé.",
       "url": "https://hdconnect.fr/services/videosurveillance",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
@@ -124,8 +124,8 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 2,
-      "name": "Installation Alarme Anti-Intrusion",
-      "description": "Systèmes d'alarme certifiés NF&A2P reconnus par les assurances. Télésurveillance 24/7, intervention rapide.",
+      "name": "Installation Alarme Anti-Intrusion NF&A2P/APSAD",
+      "description": "Systèmes d'alarme certifiés NF&A2P/APSAD avec détection IA. Télésurveillance 24/7, intervention 4h Urgence.",
       "url": "https://hdconnect.fr/services/alarme",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
@@ -134,8 +134,8 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 3,
-      "name": "Contrôle d'Accès",
-      "description": "Solutions de contrôle d'accès professionnelles : badges RFID, biométrie, interphonie vidéo, gestion centralisée.",
+      "name": "Contrôle d'Accès Biométrique",
+      "description": "Solutions de contrôle d'accès professionnelles : badges RFID, biométrie, interphonie vidéo, gestion centralisée par IA.",
       "url": "https://hdconnect.fr/services/controle-acces",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
@@ -144,8 +144,8 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 4,
-      "name": "Domotique et Maison Connectée",
-      "description": "Automatisation de votre habitat : éclairage, chauffage, volets, sécurité. Contrôle smartphone, économies d'énergie.",
+      "name": "Domotique Sécurité Intelligente",
+      "description": "Automatisation de votre habitat par IA : éclairage, chauffage, volets, sécurité. Contrôle smartphone, économies d'énergie, scénarios de protection avancés.",
       "url": "https://hdconnect.fr/services/domotique",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },
@@ -164,8 +164,8 @@ export const servicesSchema = {
     {
       "@type": "Service",
       "position": 6,
-      "name": "Maintenance et Dépannage",
-      "description": "Maintenance préventive et dépannage 24/7 de vos équipements de sécurité. Contrats sur mesure.",
+      "name": "Maintenance Préventive IA et Dépannage 4h",
+      "description": "Maintenance préventive par diagnostic IA et dépannage 4h Urgence 24/7 de vos équipements de sécurité. Contrats sur mesure.",
       "url": "https://hdconnect.fr/services/maintenance",
       "provider": { "@id": "https://hdconnect.fr/#organization" },
       "areaServed": { "@type": "Country", "name": "France" },

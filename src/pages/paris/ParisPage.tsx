@@ -46,12 +46,12 @@ import { usePhoneCall } from "@/hooks/usePhoneCall";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 // Import des images de monuments parisiens
-import louvreImage from "@/assets/monuments/louvre.jpg";
-import eiffelImage from "@/assets/monuments/tour-eiffel.jpg";
-import notredameImage from "@/assets/monuments/notre-dame.jpg";
-import sacrecoeurImage from "@/assets/monuments/sacre-coeur.jpg";
-import arcImage from "@/assets/monuments/arc-triomphe.jpg";
-import champselyseesImage from "@/assets/monuments/champs-elysees.jpg";
+import louvreImage from "@/assets/monuments/louvre.webp";
+import eiffelImage from "@/assets/monuments/tour-eiffel.webp";
+import notredameImage from "@/assets/monuments/notre-dame.webp";
+import sacrecoeurImage from "@/assets/monuments/sacre-coeur.webp";
+import arcImage from "@/assets/monuments/arc-triomphe.webp";
+import champselyseesImage from "@/assets/monuments/champs-elysees.webp";
 
 const ParisPage = () => {
   const { phoneNumber, callUrl } = usePhoneCall();
@@ -76,9 +76,9 @@ const ParisPage = () => {
   }, []);
 
   useSEO({
-    title: "Sécurité Paris | Vidéosurveillance, Alarme, Contrôle d'Accès | HD Connect",
-    description: "Expert sécurité Paris : installation vidéosurveillance HD/4K, alarmes certifiées NF&A2P, contrôle d'accès biométrique. Intervention 24h dans les 20 arrondissements. Devis gratuit.",
-    keywords: "sécurité Paris, vidéosurveillance Paris, alarme Paris, caméra surveillance Paris, contrôle accès Paris, HD Connect Paris",
+    title: "Expert Sécurité Paris 2025-2026 | Vidéosurveillance IA & Alarme NF&A2P | HD Connect",
+    description: "Expert sécurité 2025-2026 à Paris : installation vidéosurveillance IA 4K, alarmes NF&A2P et contrôle d'accès biométrique. Intervention Rapide dans les 20 arrondissements. Devis gratuit.",
+    keywords: "expert sécurité Paris 2025-2026, vidéosurveillance IA Paris, alarme NF&A2P Paris, installation caméra surveillance Paris, contrôle accès biométrique Paris, HD Connect Paris",
     canonicalUrl: "https://hdconnect.fr/villes/paris",
   });
 
@@ -206,7 +206,7 @@ const ParisPage = () => {
     },
     {
       question: "Quel est le délai d'intervention à Paris ?",
-      answer: "Nous intervenons sous 24 à 48h dans tout Paris pour les installations. Pour les urgences et dépannages, nous pouvons intervenir le jour même. Notre base en Île-de-France garantit une réactivité optimale.",
+      answer: "Nous intervenons rapidement dans tout Paris pour les installations. Pour les urgences et dépannages, nous pouvons intervenir le jour même. Notre base en Île-de-France garantit une réactivité optimale.",
     },
     {
       question: "Quels sont les arrondissements les plus à risque ?",
@@ -294,7 +294,7 @@ const ParisPage = () => {
   };
 
   const trustBadges = [
-    { label: "Installation sous 48h", icon: CheckCircle, color: "text-green-500" },
+    { label: "Installation rapidement", icon: CheckCircle, color: "text-green-500" },
     { label: "Support 24h/24 7j/7", icon: Phone, color: "text-blue-500" },
     { label: "Garantie 5 ans", icon: Shield, color: "text-violet-500" },
   ];
@@ -368,7 +368,7 @@ const ParisPage = () => {
             <motion.p 
               className={`text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              Installation professionnelle de vidéosurveillance, alarmes certifiées et contrôle d'accès dans les 20 arrondissements de Paris. Intervention sous 48h, devis gratuit.
+              Installation professionnelle de vidéosurveillance, alarmes certifiées et contrôle d'accès dans les 20 arrondissements de Paris. Intervention rapidement, devis gratuit.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -798,7 +798,7 @@ const ParisPage = () => {
               Sécurisez Votre Paris
             </h2>
             <p className="text-white/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-              Devis gratuit sous 24h pour votre projet de sécurité. Intervention rapide dans les 20 arrondissements.
+              Devis gratuit rapidement pour votre projet de sécurité. Intervention rapide dans les 20 arrondissements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

@@ -23,13 +23,13 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroInstallationImage from "@/assets/hero-installation-unique.jpg";
-import technicianWorkImage from "@/assets/installation-outdoor-work.jpg";
-import installCameraUniqueImage from "@/assets/installation-alarm-config.jpg";
+import heroInstallationImage from "@/assets/hero-installation-unique.webp";
+import technicianWorkImage from "@/assets/installation-outdoor-work.webp";
+import installCameraUniqueImage from "@/assets/installation-alarm-config.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryInstallCamera from "@/assets/gallery-install-camera.jpg";
-import galleryInstallAlarm from "@/assets/gallery-install-alarm.jpg";
-import galleryInstallRack from "@/assets/gallery-install-rack.jpg";
+import galleryInstallCamera from "@/assets/gallery-install-camera.webp";
+import galleryInstallAlarm from "@/assets/gallery-install-alarm.webp";
+import galleryInstallRack from "@/assets/gallery-install-rack.webp";
 import ServiceSchema from "@/components/SEO/ServiceSchema";
 import ServiceShowcase from "@/components/ServiceShowcase";
 
@@ -38,9 +38,9 @@ const Installation = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Besoin d'un installateur sécurité pro ? Installation sous 48h | HD Connect",
-    description: "Installation professionnelle garantie 5 ans : vidéosurveillance, alarmes, contrôle d'accès. Étude de site gratuite, intervention sous 48h. Techniciens certifiés.",
-    keywords: "installation sécurité, installateur caméra, installation alarme, contrôle d'accès, HD Connect, technicien certifié",
+    title: "Installateur Sécurité Professionnel 2025-2026 | Installation rapidement | HD Connect",
+    description: "Expert en installation de systèmes de sécurité intelligents 2025-2026. Vidéosurveillance, alarme NF&A2P, contrôle d'accès. Étude gratuite, installation garantie 5 ans.",
+    keywords: "installateur sécurité professionnel 2025-2026, installation alarme maison, pose caméra surveillance, technicien sécurité certifié, HD Connect, installation sécurité entreprise",
     canonicalUrl: "https://hdconnect.fr/services/installation",
   });
 
@@ -52,7 +52,7 @@ const Installation = () => {
   const faqItems = [
     { 
       question: "Combien de temps dure une installation ?", 
-      answer: "La durée varie selon la complexité du projet : 2-4h pour une maison standard (4-6 caméras ou alarme), 1-2 jours pour des locaux professionnels. Nous planifions l'intervention pour minimiser la perturbation de votre activité." 
+      answer: "La durée varie selon la complexité du projet : quelques heures pour une maison standard (plusieurs caméras ou alarme), 1-2 jours pour des locaux professionnels. Nous planifions l'intervention pour minimiser la perturbation de votre activité." 
     },
     { 
       question: "L'étude de site est-elle vraiment gratuite ?", 
@@ -84,10 +84,10 @@ const Installation = () => {
   ];
 
   const processSteps = [
-    { icon: Phone, title: "1. Prise de Contact", description: "Appelez-nous ou remplissez le formulaire en ligne. Un conseiller évalue vos besoins et planifie une visite technique gratuite dans les 48h." },
+    { icon: Phone, title: "1. Prise de Contact", description: "Appelez-nous ou remplissez le formulaire en ligne. Un conseiller évalue vos besoins et planifie une visite technique gratuite rapidement." },
     { icon: MapPin, title: "2. Étude de Site", description: "Notre technicien se déplace gratuitement pour auditer votre site, identifier les points de vulnérabilité et vous conseiller sur la solution optimale." },
-    { icon: FileText, title: "3. Devis Détaillé", description: "Vous recevez un devis transparent et détaillé sous 24h après la visite. Le prix est ferme et définitif, sans surprise ni frais cachés." },
-    { icon: HardHat, title: "4. Installation Express", description: "Une fois le devis validé, nos techniciens interviennent sous 48h. Installation propre, configuration complète et formation à l'utilisation." },
+    { icon: FileText, title: "3. Devis Détaillé", description: "Vous recevez un devis transparent et détaillé rapidement après la visite. Le prix est ferme et définitif, sans surprise ni frais cachés." },
+    { icon: HardHat, title: "4. Installation Express", description: "Une fois le devis validé, nos techniciens interviennent rapidement. Installation propre, configuration complète et formation à l'utilisation." },
   ];
 
   const systemTypes = [
@@ -123,7 +123,7 @@ const Installation = () => {
 
   const advantages = [
     { icon: Award, title: "10+ Ans d'Expertise", description: "Plus d'une décennie d'expérience dans l'installation de systèmes de sécurité pour particuliers et professionnels." },
-    { icon: Zap, title: "Installation sous 48h", description: "De la validation du devis à la mise en service en moins de 48h. Intervention express le jour même possible." },
+    { icon: Zap, title: "Installation rapidement", description: "De la validation du devis à la mise en service en les meilleurs délais. Intervention express le jour même possible." },
     { icon: Shield, title: "Garantie 5 Ans", description: "Tous nos équipements et installations sont couverts par une garantie de 5 ans pièces et main d'œuvre." },
     { icon: Clock, title: "Support 24/7", description: "Assistance technique disponible 24h/24, 7j/7 par téléphone. Intervention sur site rapide en cas de problème." },
   ];
@@ -146,9 +146,9 @@ const Installation = () => {
       
       <ServiceSchema
         serviceName="Installation Systèmes de Sécurité Professionnelle"
-        serviceDescription="Expert en installation de systèmes de sécurité : vidéosurveillance, alarmes anti-intrusion, contrôle d'accès, domotique. Étude gratuite, installation sous 48h, garantie 5 ans. Intervention sur toute la France."
+        serviceDescription="Expert en installation de systèmes de sécurité : vidéosurveillance, alarmes anti-intrusion, contrôle d'accès, domotique. Étude gratuite, installation rapidement, garantie 5 ans. Intervention sur toute la France."
         serviceUrl="/services/installation"
-        serviceImage="/assets/prestations-installation.jpg"
+        serviceImage="/assets/prestations-installation.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -158,7 +158,7 @@ const Installation = () => {
         <ServiceHero
           title="Installation Professionnelle de Systèmes de Sécurité"
           subtitle="Installation Expert"
-          description="HD Connect installe vos systèmes de sécurité avec expertise et rigueur. Étude de site gratuite, installation rapide sous 48h, configuration complète et garantie 5 ans. Confiez votre sécurité à des professionnels certifiés."
+          description="HD Connect installe vos systèmes de sécurité avec expertise et rigueur. Étude de site gratuite, installation rapide rapidement, configuration complète et garantie 5 ans. Confiez votre sécurité à des professionnels certifiés."
           backgroundImage={heroInstallationImage}
           icon={<Settings className="w-4 h-4" />}
           badgeText="Installation Expert"
@@ -167,22 +167,28 @@ const Installation = () => {
 
         {/* SECTION DESCRIPTION */}
         <ContentSection
-          title="L'Installation Professionnelle : La Clé d'une Sécurité Fiable"
-          badge="Expertise Métier"
+          title="L'Installation Professionnelle 2025-2026 : La Clé d'une Sécurité Fiable par IA"
+          badge="Expertise Métier & IA"
           badgeIcon={<Settings className="w-4 h-4" />}
           imagePosition="right"
           image={technicianWorkImage}
-          imageAlt="Technicien HD Connect installant un système de sécurité"
+          imageAlt="Technicien expert HD Connect certifié installant une caméra de sécurité intelligente sur un support mural extérieur haute résistance"
           content={
             <>
               <p>
                 Un système de sécurité n'est efficace que s'il est correctement installé et configuré. <strong>80% des pannes et dysfonctionnements</strong> sont dus à une installation défaillante ou un paramétrage incorrect. C'est pourquoi HD Connect fait de l'installation professionnelle sa priorité absolue.
               </p>
               <p>
-                Nos techniciens sont formés et certifiés par les plus grandes marques du secteur (Hikvision, Dahua, Ajax, Honeywell). Ils maîtrisent l'installation de tous les types de systèmes : vidéosurveillance, alarmes, contrôle d'accès, domotique et réseaux.
+                En 2025-2026, nos installations intègrent systématiquement le <strong>paramétrage des algorithmes d'IA</strong>. Nos techniciens ne se contentent pas de poser le matériel ; ils configurent les zones de détection intelligente, les franchissements de ligne virtuelle et les scénarios d'automatisation pour une protection proactive.
               </p>
               <p>
-                Chaque installation commence par une <strong>étude de site gratuite</strong> pour comprendre vos besoins spécifiques et identifier les points de vulnérabilité. Nous vous proposons ensuite une solution sur mesure, adaptée à votre budget et à vos contraintes.
+                Nos techniciens certifiés interviennent sur tous types de sites : maisons, appartements, commerces, bureaux, entrepôts. Nous assurons le câblage structuré, la pose des équipements, la configuration réseau sécurisée et la formation complète à l'utilisation des applications mobiles.
+              </p>
+              <p>
+                Choisir HD Connect, c'est l'assurance d'une installation <strong>propre, discrète et performante</strong>, couverte par une garantie de 5 ans pièces et main d'œuvre, conforme aux normes les plus strictes du marché.
+              </p>
+              <p>
+                De plus, chaque installation est couverte par une <strong>garantie de 5 ans</strong>, pièces et main-d'œuvre, un gage de notre confiance dans la qualité de notre travail et des matériaux que nous utilisons. L'étude de site et le devis sont systématiquement <strong>gratuits et sans engagement</strong>. En cas de besoin, notre service de maintenance vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
             </>
           }
@@ -241,12 +247,12 @@ const Installation = () => {
         {/* CTA INTERMÉDIAIRE */}
         <CTAIntermediate 
           title="Besoin d'une installation professionnelle ?"
-          subtitle="Demandez une étude de site gratuite et un devis personnalisé sous 24h."
+          subtitle="Demandez une étude de site gratuite et un devis personnalisé rapidement."
           phoneNumber={contactInfo.phoneMobile}
           variant="gradient"
           accentColor="installation"
           showBenefits={true}
-          urgencyText="Installation sous 48h garantie"
+          urgencyText="Installation rapidement garantie"
         />
 
         {/* STATISTIQUES CLÉS - FOND CLAIR COMME ACCUEIL */}
@@ -254,7 +260,7 @@ const Installation = () => {
           title="Notre Expertise Installation en Chiffres"
           stats={[
             { value: "5 ans", label: "Garantie", description: "pièces et main d'œuvre" },
-            { value: "48h", label: "Installation", description: "délai d'intervention" },
+            { value: "Urgence", label: "Installation", description: "délai d'intervention" },
             { value: "2000+", label: "Projets", description: "réalisés depuis 2014" },
             { value: "98%", label: "Satisfaction", description: "clients recommandent" },
           ]}
@@ -318,7 +324,7 @@ const Installation = () => {
         {/* 2ème CTA ORANGE - BIEN ESPACÉ */}
         <CTAIntermediate 
           title="Prêt à lancer votre projet ?"
-          subtitle="Étude de site gratuite et devis détaillé sous 24h."
+          subtitle="Étude de site gratuite et devis détaillé rapidement."
           phoneNumber={contactInfo.phoneMobile}
           variant="accent"
           showBenefits={false}
@@ -363,7 +369,7 @@ const Installation = () => {
                 Demandez Votre Devis d'Installation Gratuit
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude de site offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude de site offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

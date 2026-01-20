@@ -21,8 +21,8 @@ const GarantiesSection = ({ variant = "default" }: GarantiesSectionProps) => {
     },
     {
       icon: Clock,
-      title: "Intervention 24h",
-      description: "Dépannage express sous 24h en cas d'urgence",
+      title: "Intervention Rapide",
+      description: "Dépannage express rapidement en cas d'urgence",
       color: "from-orange-500 to-amber-500",
       bgColor: "bg-orange-500/10",
     },

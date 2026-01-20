@@ -28,16 +28,16 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroAntenneImage from "@/assets/hero-antenne-satellite.jpg";
-import antenneInstallImage from "@/assets/antenne-satellite-toit.jpg";
-import antenneTntMesureImage from "@/assets/antenne-tnt-immeuble.jpg";
-import antenneCollectiveImage from "@/assets/antenne-collective.jpg";
-import antenneTntInstallImage from "@/assets/antenne-tnt-install.jpg";
-import antenneMaisonImage from "@/assets/antenne-maison-particulier.jpg";
+import heroAntenneImage from "@/assets/hero-antenne-satellite.webp";
+import antenneInstallImage from "@/assets/antenne-satellite-toit.webp";
+import antenneTntMesureImage from "@/assets/antenne-tnt-immeuble.webp";
+import antenneCollectiveImage from "@/assets/antenne-collective.webp";
+import antenneTntInstallImage from "@/assets/antenne-tnt-install.webp";
+import antenneMaisonImage from "@/assets/antenne-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryAntenneParabole from "@/assets/gallery-antenne-parabole.jpg";
-import galleryAntenneTnt from "@/assets/gallery-antenne-tnt.jpg";
-import galleryAntenneTech from "@/assets/gallery-antenne-tech.jpg";
+import galleryAntenneParabole from "@/assets/gallery-antenne-parabole.webp";
+import galleryAntenneTnt from "@/assets/gallery-antenne-tnt.webp";
+import galleryAntenneTech from "@/assets/gallery-antenne-tech.webp";
 
 const AntenneSatellite = () => {
   const { antenneSatellite } = content.pageServices;
@@ -45,9 +45,9 @@ const AntenneSatellite = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "TV pixelisée ou sans signal ? Installation antenne TNT & satellite | HD Connect",
-    description: "Retrouvez une image parfaite ! Installation antenne TNT, parabole satellite, antenne collective. Réception garantie même en zone difficile. Devis gratuit.",
-    keywords: "antenne TNT, parabole satellite, installation antenne, réception TV, antenne collective, amplificateur, HD Connect",
+    title: "Installation Antenne TNT & Parabole Satellite 2025-2026 | Réception 4K | HD Connect",
+    description: "Expert en réception TV haute définition 2025-2026. Installation antenne TNT, parabole satellite, antenne collective. Diagnostic signal gratuit, image 4K garantie.",
+    keywords: "installation antenne TNT 2025-2026, pose parabole satellite, réception TV 4K, antenne collective immeuble, réglage signal satellite, HD Connect, antenniste professionnel",
     canonicalUrl: "https://hdconnect.fr/services/antenne-satellite",
   });
 
@@ -126,7 +126,7 @@ const AntenneSatellite = () => {
         serviceName="Installation Antenne TNT et Parabole Satellite"
         serviceDescription="Expert en installation d'antennes TNT et paraboles satellite pour particuliers et professionnels. Réception optimale, antennes collectives, dépannage express. Intervention sur toute la France."
         serviceUrl="/services/antenne-satellite"
-        serviceImage="/assets/service-antenne.jpg"
+        serviceImage="/assets/service-antenne.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -147,22 +147,28 @@ const AntenneSatellite = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Installer une Antenne Performante ?"
-          badge="Réception Optimale"
+          title="Pourquoi Choisir une Installation Antenne & Satellite Haute Performance en 2025-2026 ?"
+          badge="Réception 4K & Signal IA"
           badgeIcon={<Satellite className="w-4 h-4" />}
           imagePosition="right"
           image={antenneInstallImage}
-          imageAlt="Technicien installant une parabole satellite sur un toit"
+          imageAlt="Technicien expert antenniste certifié HD Connect effectuant le réglage de précision d'une parabole satellite sur un toit avec un mesureur de champ numérique haute définition"
           content={
             <>
               <p>
-                La qualité de réception TV dépend directement de la qualité de l'antenne et de son orientation. Une mauvaise antenne ou mal orientée entraîne des problèmes de pixelisation, de perte de signal ou de chaînes manquantes. Ces problèmes ne peuvent pas être résolus par le téléviseur ou le décodeur.
+                La qualité de réception TV dépend directement de la qualité de l'antenne et de son orientation. En 2025-2026, avec la généralisation des flux 4K et 8K par satellite, une installation de précision est indispensable pour éviter toute pixelisation ou perte de signal.
               </p>
               <p>
-                Chez HD Connect, nous installons des <strong>antennes TNT haute performance</strong> optimisées pour votre localisation géographique. Nos techniciens utilisent des testeurs professionnels pour mesurer la qualité du signal et orienter précisément l'antenne.
+                Chez HD Connect, nous installons des <strong>antennes TNT et paraboles satellite de dernière génération</strong>, conçues pour filtrer les interférences liées à la 5G et garantir une pureté de signal maximale. Nos techniciens utilisent des mesureurs de champ numériques de haute précision pour une orientation au millimètre près.
               </p>
               <p>
-                Pour les zones difficiles (zones montagneuses, zones urbaines denses, zones rurales éloignées), nous proposons des <strong>amplificateurs de signal</strong> et des <strong>antennes multi-directionnelles</strong> qui captent le signal de plusieurs relais TV simultanément.
+                Pour les zones difficiles, nous déployons des <strong>systèmes d'amplification intelligents</strong> qui stabilisent le signal en temps réel, vous garantissant une image parfaite quelles que soient les conditions météorologiques.
+              </p>
+              <p>
+                Nos installations collectives pour immeubles intègrent des stations de tête modulaires permettant une distribution fluide de la TNT et du satellite vers des centaines de prises, avec une maintenance simplifiée.
+              </p>
+              <p>
+                En tant qu'antennistes professionnels, nous garantissons une installation conforme aux normes en vigueur (NF C 90-125) et utilisons des mesureurs de champ numériques pour certifier la qualité du signal. C'est l'assurance d'une réception <strong>4K/8K</strong> sans faille et d'une durabilité maximale de votre installation. En cas de perte de signal critique, notre service d'urgence vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
             </>
           }
@@ -254,7 +260,7 @@ const AntenneSatellite = () => {
             { value: "100%", label: "Réception garantie", description: "ou remboursement" },
             { value: "500+", label: "Chaînes accessibles", description: "TNT + Satellite" },
             { value: "1 an", label: "Garantie installation", description: "pièces et main d'œuvre" },
-            { value: "48h", label: "Intervention rapide", description: "partout en France" },
+            { value: "Urgence", label: "Intervention rapide", description: "partout en France" },
           ]}
           variant="antenne"
         />
@@ -322,7 +328,7 @@ const AntenneSatellite = () => {
                 Demandez Votre Diagnostic Gratuit
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Diagnostic technique gratuit, sans engagement.
+                Recevez une proposition personnalisée rapidement. Diagnostic technique gratuit, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

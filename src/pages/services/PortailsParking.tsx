@@ -28,16 +28,16 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroPortailsImage from "@/assets/hero-portails.jpg";
-import portailAutoImage from "@/assets/portail-coulissant-villa.jpg";
-import garageMotorisImage from "@/assets/garage-motorise.jpg";
-import barriereLevantImage from "@/assets/barriere-parking-auto.jpg";
-import barriereParkingImage from "@/assets/barriere-parking.jpg";
-import portailMaisonImage from "@/assets/portail-maison-particulier.jpg";
+import heroPortailsImage from "@/assets/hero-portails.webp";
+import portailAutoImage from "@/assets/portail-coulissant-villa.webp";
+import garageMotorisImage from "@/assets/garage-motorise.webp";
+import barriereLevantImage from "@/assets/barriere-parking-auto.webp";
+import barriereParkingImage from "@/assets/barriere-parking.webp";
+import portailMaisonImage from "@/assets/portail-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryPortailCoulissant from "@/assets/gallery-portail-coulissant.jpg";
-import galleryPortailGarage from "@/assets/gallery-portail-garage.jpg";
-import galleryPortailBarriere from "@/assets/gallery-portail-barriere.jpg";
+import galleryPortailCoulissant from "@/assets/gallery-portail-coulissant.webp";
+import galleryPortailGarage from "@/assets/gallery-portail-garage.webp";
+import galleryPortailBarriere from "@/assets/gallery-portail-barriere.webp";
 
 const PortailsParking = () => {
   const { portailsParking } = content.pageServices;
@@ -45,9 +45,9 @@ const PortailsParking = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Portail difficile à ouvrir ? Motorisation portails & barrières | HD Connect",
-    description: "Simplifiez votre quotidien avec un portail automatique. Motorisation portails, portes garage, barrières parking. Ouverture par smartphone. Devis gratuit.",
-    keywords: "portail automatique, motorisation portail, barrière parking, porte garage, interphone, vidéophone, HD Connect",
+    title: "Motorisation Portail & Barrière Parking 2025-2026 | Accès Intelligent IA | HD Connect",
+    description: "Expert en motorisation de portails et barrières parking 2025-2026. Ouverture par smartphone, reconnaissance de plaque IA, installation certifiée. Devis gratuit rapidement.",
+    keywords: "motorisation portail automatique 2025-2026, barrière parking intelligente, reconnaissance plaque immatriculation IA, porte garage motorisée, HD Connect, accès parking entreprise",
     canonicalUrl: "https://hdconnect.fr/services/portails-parking",
   });
 
@@ -126,7 +126,7 @@ const PortailsParking = () => {
         serviceName="Installation Portails Automatiques et Barrières Parking"
         serviceDescription="Expert en motorisation de portails, portes de garage, barrières de parking et interphones. Installation professionnelle, contrôle d'accès sécurisé. Intervention sur toute la France."
         serviceUrl="/services/portails-parking"
-        serviceImage="/assets/service-portail.jpg"
+        serviceImage="/assets/service-portail.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -147,22 +147,28 @@ const PortailsParking = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Motoriser Votre Portail ou Porte de Garage ?"
-          badge="Confort & Sécurité"
+          title="Pourquoi Choisir la Motorisation Intelligente par IA en 2025-2026 ?"
+          badge="Confort & Accès IA"
           badgeIcon={<DoorOpen className="w-4 h-4" />}
           imagePosition="right"
           image={portailAutoImage}
-          imageAlt="Portail automatique motorisé d'une belle résidence au crépuscule"
+          imageAlt="Portail automatique motorisé haute sécurité d'une résidence moderne avec système de contrôle d'accès intelligent intégré"
           content={
             <>
               <p>
-                La motorisation des portails et portes de garage offre bien plus que du confort : c'est aussi une question de <strong>sécurité</strong> et de <strong>praticité</strong>. Ouvrir manuellement un portail par mauvais temps, la nuit ou avec les mains pleines est inconfortable et potentiellement dangereux.
+                La motorisation des portails et portes de garage offre bien plus que du confort : c'est aussi une question de <strong>sécurité</strong> et de <strong>praticité</strong>. En 2025-2026, HD Connect intègre l'<strong>Intelligence Artificielle</strong> pour une gestion des accès sans friction.
               </p>
               <p>
-                Chez HD Connect, nous installons des systèmes de motorisation certifiés et conformes aux normes de sécurité en vigueur. Nos solutions intègrent des <strong>capteurs de sécurité</strong> (détecteurs de présence, photo-cellules) qui arrêtent immédiatement le portail en cas d'obstacle.
+                Nos systèmes de <strong>reconnaissance de plaque d'immatriculation (LPR) par IA</strong> permettent une ouverture automatique et sécurisée de votre portail ou barrière de parking dès votre arrivée, sans aucune manipulation. Pour les visiteurs, nos interphones vidéo IP avec IA filtrent les appels et vous notifient directement sur votre smartphone avec une image haute définition.
               </p>
               <p>
-                Nos systèmes offrent une <strong>gestion centralisée des accès</strong> : télécommandes, digicodes, badges RFID ou reconnaissance faciale. Pour les immeubles collectifs, un interphone vidéo IP permet aux résidents d'ouvrir le portail à distance.
+                Chez HD Connect, nous installons des systèmes de motorisation certifiés (Somfy, Nice, Came) conformes aux normes de sécurité les plus strictes. Nos solutions intègrent des <strong>capteurs de sécurité intelligents</strong> capables de distinguer un obstacle d'un simple passage, évitant ainsi les arrêts intempestifs tout en garantissant une protection totale.
+              </p>
+              <p>
+                Nos systèmes offrent une <strong>gestion centralisée et cloud</strong> : vous contrôlez vos accès de n'importe où dans le monde, avec un historique complet des passages pour une traçabilité parfaite.
+              </p>
+              <p>
+                L'intégration de la <strong>Reconnaissance de Plaque d'Immatriculation (LPR) par IA</strong> permet une gestion des accès ultra-rapide et sécurisée pour les flottes de véhicules. De plus, nos interphones vidéo IP offrent une qualité d'image HD et une ouverture à distance via smartphone, augmentant le confort et la sécurité des résidents. En cas de panne critique, notre service d'urgence vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
             </>
           }
@@ -322,7 +328,7 @@ const PortailsParking = () => {
                 Demandez Votre Devis de Motorisation
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Visite technique gratuite, sans engagement.
+                Recevez une proposition personnalisée rapidement. Visite technique gratuite, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

@@ -25,9 +25,9 @@ import {
 
 const Blog = () => {
   useSEO({
-    title: "Blog Sécurité & Domotique | Conseils et Actualités - HD Connect",
-    description: "Découvrez nos articles experts sur la vidéosurveillance, les alarmes, le contrôle d'accès et la domotique. Conseils, guides et actualités du secteur sécurité.",
-    keywords: "blog sécurité, conseils vidéosurveillance, guide alarme, actualités domotique, HD Connect",
+    title: "Blog Sécurité 2025-2026 | Conseils IA, Vidéosurveillance & Alarme | HD Connect",
+    description: "Expertise sécurité 2025-2026 : guides sur la vidéosurveillance IA, alarmes NF&A2P et domotique. Conseils d'experts pour protéger votre domicile et entreprise.",
+    keywords: "blog sécurité 2025-2026, conseils vidéosurveillance IA, guide alarme NF&A2P, actualités sécurité électronique, HD Connect blog",
     canonicalUrl: "https://hdconnect.fr/blog",
   });
 

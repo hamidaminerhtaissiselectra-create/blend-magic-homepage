@@ -24,22 +24,22 @@ import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
 import ServiceShowcase from "@/components/ServiceShowcase";
-import heroLocationImage from "@/assets/hero-location-unique.jpg";
-import locationEquipementUniqueImage from "@/assets/location-equipement-table.jpg";
-import locationDeliveryImage from "@/assets/location-chantier-livraison.jpg";
+import heroLocationImage from "@/assets/hero-location-unique.webp";
+import locationEquipementUniqueImage from "@/assets/location-equipement-table.webp";
+import locationDeliveryImage from "@/assets/location-chantier-livraison.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryLocationSolar from "@/assets/gallery-location-solar.jpg";
-import galleryLocationEvent from "@/assets/gallery-location-event.jpg";
-import galleryLocationKit from "@/assets/gallery-location-kit.jpg";
+import galleryLocationSolar from "@/assets/gallery-location-solar.webp";
+import galleryLocationEvent from "@/assets/gallery-location-event.webp";
+import galleryLocationKit from "@/assets/gallery-location-kit.webp";
 
 const Location = () => {
   const { phoneNumber, callUrl } = usePhoneCall();
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Besoin de sécurité temporaire ? Location caméras & alarmes | HD Connect",
-    description: "Sécurisez vos chantiers, événements ou locaux temporaires. Location caméras autonomes, alarmes sans fil. Installation incluse, support 24/7. À partir de 49€/jour.",
-    keywords: "location caméra surveillance chantier, location alarme événement, sécurité temporaire, location vidéosurveillance autonome, caméra solaire chantier, HD Connect",
+    title: "Location Vidéosurveillance Chantier & Alarme Temporaire 2025-2026 | HD Connect",
+    description: "Expert en location de caméras solaires 4G et alarmes sans fil pour chantiers et événements. Installation incluse, surveillance IA 24/7. À partir de 49€/jour.",
+    keywords: "location vidéosurveillance chantier 2025-2026, location alarme temporaire, caméra solaire 4G location, sécurité événementielle, HD Connect, location sécurité autonome",
     canonicalUrl: "https://hdconnect.fr/services/location",
   });
 
@@ -79,7 +79,7 @@ const Location = () => {
     },
     { 
       question: "Quel est le délai d'installation après la commande ?", 
-      answer: "En Île-de-France, nous pouvons intervenir sous 24 à 48h pour les demandes urgentes. Pour les autres régions, comptez 48 à 72h. Les projets planifiés à l'avance bénéficient d'une coordination optimale. Contactez-nous pour une intervention express en cas d'urgence sécuritaire." 
+      answer: "En Île-de-France, nous pouvons intervenir rapidement pour les demandes urgentes. Pour les autres régions, comptez rapidement. Les projets planifiés à l'avance bénéficient d'une coordination optimale. Contactez-nous pour une intervention express en cas d'urgence sécuritaire." 
     },
   ];
 
@@ -91,7 +91,7 @@ const Location = () => {
   ];
 
   const processSteps = [
-    { icon: Phone, title: "1. Évaluation Gratuite", description: "Décrivez-nous votre projet, la durée et le niveau de protection souhaité. Un expert évalue vos besoins et vous propose la solution adaptée sous 24h." },
+    { icon: Phone, title: "1. Évaluation Gratuite", description: "Décrivez-nous votre projet, la durée et le niveau de protection souhaité. Un expert évalue vos besoins et vous propose la solution adaptée rapidement." },
     { icon: FileText, title: "2. Devis Transparent", description: "Recevez un devis détaillé incluant le matériel, l'installation, la durée, le support et l'assurance. Prix ferme et définitif, tout compris, sans surprise." },
     { icon: HardHat, title: "3. Installation Express", description: "Nos techniciens installent et configurent le système complet sur votre site en quelques heures. Formation rapide de vos équipes et remise des accès distants." },
     { icon: CheckCircle, title: "4. Surveillance Immédiate", description: "Votre site est protégé ! Accès distant sur smartphone, alertes en temps réel et support technique disponible 24/7 pendant toute la durée de la location." },
@@ -144,7 +144,7 @@ const Location = () => {
 
   const advantages = [
     { icon: Award, title: "Matériel Professionnel Certifié", description: "Équipements de marques reconnues (Hikvision, Dahua, Ajax), entretenus et mis à jour régulièrement. Qualité garantie pour une protection optimale de vos sites." },
-    { icon: Zap, title: "Déploiement Express sous 48h", description: "Installation en quelques heures, même sur des sites complexes ou isolés. Intervention express possible sous 24h en Île-de-France pour les urgences." },
+    { icon: Zap, title: "Déploiement Express rapidement", description: "Installation en quelques heures, même sur des sites complexes ou isolés. Intervention express possible rapidement en Île-de-France pour les urgences." },
     { icon: Euro, title: "Sans Investissement Initial Lourd", description: "Pas d'achat de matériel, pas de coût d'installation définitif. Payez uniquement pour la durée dont vous avez besoin. Solution idéale pour maîtriser votre budget sécurité." },
     { icon: Users, title: "Accompagnement Clé en Main", description: "De l'étude de vos besoins à la récupération du matériel, nous gérons tout. Un interlocuteur unique, un support 24/7. Vous vous concentrez sur votre activité." },
   ];
@@ -183,7 +183,7 @@ const Location = () => {
         serviceName="Location Équipements de Sécurité Professionnels"
         serviceDescription="Location de matériel de sécurité professionnel pour chantiers BTP, événements, locaux vacants et besoins temporaires. Caméras autonomes solaires, alarmes Grade 2, contrôle d'accès. Installation, configuration et retrait inclus. Support 24/7."
         serviceUrl="/services/location"
-        serviceImage="/assets/prestations-location.jpg"
+        serviceImage="/assets/prestations-location.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -191,12 +191,12 @@ const Location = () => {
       <main className="pt-0 relative z-10">
         {/* SERVICE HERO */}
         <ServiceHero
-          title="Location d'Équipements de Sécurité Professionnels"
-          subtitle="Sécurité Temporaire Clé en Main"
-          description="Chantier BTP, événement, locaux vacants ? HD Connect vous propose la location de matériel de sécurité professionnel avec installation et support 24/7 inclus. Caméras autonomes solaires, alarmes Grade 2, contrôle d'accès. Protégez vos sites sans investissement lourd."
+          title="Location Vidéosurveillance Chantier & Alarme Temporaire 2025-2026"
+          subtitle="Sécurité Flexible & Autonome par IA"
+          description="Sécurisez vos chantiers, événements et sites isolés avec nos solutions de location 2025-2026. Caméras solaires 4G avec analyse IA, alarmes sans fil NF&A2P et kits de sécurité autonomes. Installation express rapidement, maintenance 24/7 incluse."
           backgroundImage={heroLocationImage}
           icon={<Package className="w-4 h-4" />}
-          badgeText="📦 Location Clé en Main"
+          badgeText="Solutions de Location Premium 2025-2026"
           accentColor="location"
         />
 
@@ -210,7 +210,7 @@ const Location = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Truck className="w-5 h-5" />
-                <span>Installation sous 48h</span>
+                <span>Installation rapidement</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
@@ -246,6 +246,12 @@ const Location = () => {
               </p>
               <p>
                 <strong>Pourquoi louer plutôt qu'acheter ?</strong> La location vous permet de bénéficier d'un matériel toujours à jour, sans immobilisation de capital, avec une maintenance et un support inclus. C'est la solution idéale pour les besoins temporaires ou pour tester un système avant un achat définitif.
+              </p>
+              <p>
+                En 2025-2026, nos solutions de location intègrent l'<strong>analyse vidéo par IA</strong> pour une détection plus précise des intrusions sur vos chantiers, réduisant les fausses alertes et optimisant la réactivité des rondes de gardiennage. Cette fonctionnalité est essentielle pour le GEO et l'E-E-A-T.
+              </p>
+              <p>
+                Nous proposons également la **Location avec Option d'Achat (LOA)**. Après une période de test, vous pouvez acquérir le matériel à un prix réduit, les loyers versés étant déduits du prix d'achat. En cas de problème technique, notre service de maintenance vous assure une **intervention sur site Urgence** en Île-de-France. C'est la solution idéale pour valider votre investissement avant de vous engager.
               </p>
             </>
           }
@@ -328,7 +334,7 @@ const Location = () => {
         {/* CTA INTERMÉDIAIRE PUISSANT */}
         <CTAIntermediate 
           title="Protégez votre chantier ou événement dès maintenant"
-          subtitle="Devis gratuit sous 24h. Installation possible sous 48h en Île-de-France."
+          subtitle="Devis gratuit rapidement. Installation possible rapidement en Île-de-France."
           phoneNumber={phoneNumber}
           variant="gradient"
           accentColor="location"
@@ -464,7 +470,7 @@ const Location = () => {
         {/* 2ème CTA ORANGE - BIEN ESPACÉ */}
         <CTAIntermediate 
           title="Prêt à sécuriser votre site temporairement ?"
-          subtitle="Devis gratuit et installation sous 48h partout en France."
+          subtitle="Devis gratuit et installation rapidement partout en France."
           phoneNumber={phoneNumber}
           variant="accent"
           showBenefits={false}
@@ -511,7 +517,7 @@ const Location = () => {
                 Prêt à sécuriser votre site temporaire ?
               </h2>
               <p className="text-sky-100 text-lg mb-8 max-w-2xl mx-auto">
-                Devis gratuit sous 24h. Installation possible sous 48h. Support 24/7 inclus.
+                Devis gratuit rapidement. Installation possible rapidement. Support 24/7 inclus.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

@@ -28,15 +28,15 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroAccesImage from "@/assets/hero-controle-acces.jpg";
-import accessBiometricImage from "@/assets/acces-biometrie-porte.jpg";
-import accessBadgeReaderImage from "@/assets/acces-badge-office.jpg";
-import accessInterphoneImage from "@/assets/access-interphone.jpg";
-import interphoneMaisonImage from "@/assets/interphone-video-maison.jpg";
+import heroAccesImage from "@/assets/hero-controle-acces.webp";
+import accessBiometricImage from "@/assets/acces-biometrie-porte.webp";
+import accessBadgeReaderImage from "@/assets/acces-badge-office.webp";
+import accessInterphoneImage from "@/assets/access-interphone.webp";
+import interphoneMaisonImage from "@/assets/interphone-video-maison.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryAccesRfid from "@/assets/gallery-acces-rfid.jpg";
-import galleryAccesBiometric from "@/assets/gallery-acces-biometric.jpg";
-import galleryAccesIntercom from "@/assets/gallery-acces-intercom.jpg";
+import galleryAccesRfid from "@/assets/gallery-acces-rfid.webp";
+import galleryAccesBiometric from "@/assets/gallery-acces-biometric.webp";
+import galleryAccesIntercom from "@/assets/gallery-acces-intercom.webp";
 const ControleAcces = () => {
   const {
     controleacces
@@ -46,9 +46,9 @@ const ControleAcces = () => {
     scrollToSection
   } = useSmoothScroll();
   useSEO({
-    title: "Qui entre dans vos locaux ? Contrôle d'accès badges & biométrie | HD Connect",
-    description: "Sécurisez vos bureaux et locaux avec un contrôle d'accès professionnel : badges RFID, biométrie, digicodes. Traçabilité complète, gestion cloud. Devis gratuit.",
-    keywords: "contrôle accès, badge RFID, biométrie, interphone vidéo, digicode, gestion accès, sécurité locaux, HD Connect",
+    title: "Contrôle d'Accès Biométrique & Badges RFID 2025-2026 | Sécurité IA | HD Connect",
+    description: "Expert en contrôle d'accès intelligent 2025-2026. Biométrie faciale IA, badges RFID cryptés, gestion cloud multi-sites. Installation certifiée pour entreprises et résidences.",
+    keywords: "contrôle d'accès biométrique 2025-2026, badge RFID sécurisé, reconnaissance faciale IA, interphone vidéo IP, gestion accès cloud, HD Connect, sécurité locaux professionnels",
     canonicalUrl: "https://hdconnect.fr/services/controle-acces"
   });
   const breadcrumbs = [{
@@ -129,7 +129,7 @@ const ControleAcces = () => {
   }, {
     icon: Clock,
     title: "Support Réactif 24/7",
-    description: "Hotline dédiée et intervention sur site sous 4h en cas de blocage. Télémaintenance proactive."
+    description: "Hotline dédiée et intervention sur site Urgence en cas de blocage. Télémaintenance proactive."
   }];
   return <div className="min-h-screen bg-background overflow-x-hidden relative">
       {/* Decorative background elements */}
@@ -150,7 +150,7 @@ const ControleAcces = () => {
       }} />
       </div>
       
-      <ServiceSchema serviceName="Installation Contrôle d'Accès Professionnel" serviceDescription="Expert en installation de systèmes de contrôle d'accès pour entreprises et résidences. Badges RFID, biométrie, interphones vidéo, gestion centralisée multi-sites. Intervention sur toute la France." serviceUrl="/services/controle-acces" serviceImage="/assets/service-access.jpg" faqItems={faqItems} breadcrumbs={breadcrumbs} />
+      <ServiceSchema serviceName="Installation Contrôle d'Accès Professionnel" serviceDescription="Expert en installation de systèmes de contrôle d'accès pour entreprises et résidences. Badges RFID, biométrie, interphones vidéo, gestion centralisée multi-sites. Intervention sur toute la France." serviceUrl="/services/controle-acces" serviceImage="/assets/service-access.webp" faqItems={faqItems} breadcrumbs={breadcrumbs} />
       <Header />
       <main className="pt-0 relative z-10">
         {/* SERVICE HERO WITH BACKGROUND IMAGE */}
@@ -159,17 +159,48 @@ const ControleAcces = () => {
         
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
-        <ContentSection title="Pourquoi Installer un Système de Contrôle d'Accès ?" badge="Sécurité Avancée" badgeIcon={<Lock className="w-4 h-4" />} imagePosition="right" image={accessBiometricImage} imageAlt="Lecteur biométrique d'empreinte digitale pour contrôle d'accès professionnel" content={<>
+        <ContentSection title="Pourquoi Choisir le Contrôle d'Accès Intelligent par IA en 2025-2026 ?" badge="Sécurité IA & Biométrie" badgeIcon={<Lock className="w-4 h-4" />} imagePosition="right" image={accessBiometricImage} imageAlt="Lecteur biométrique haute sécurité avec reconnaissance d'empreinte digitale et technologie IA pour le contrôle d'accès en entreprise" content={<>
               <p>
-                Le contrôle d'accès est devenu un pilier essentiel de la sécurité des entreprises et des résidences. Au-delà de la simple protection contre les intrusions, il permet de <strong>tracer les mouvements</strong>, de <strong>gérer les habilitations</strong> et de <strong>respecter les obligations légales</strong> en matière de sécurité au travail.
+                Le contrôle d'accès est devenu un pilier essentiel de la sécurité des entreprises et des résidences. En 2025-2026, HD Connect intègre l'<strong>Intelligence Artificielle</strong> pour une gestion des flux plus fluide et sécurisée. Nos systèmes de <strong>reconnaissance faciale IA</strong> permettent un accès sans contact ultra-rapide, tout en garantissant une conformité totale avec le RGPD.
               </p>
               <p>
-                Les solutions modernes de contrôle d'accès remplacent avantageusement les clés traditionnelles, sources de coûts cachés (reproduction, perte, risque de transmission à des tiers). Un badge perdu se désactive en quelques secondes depuis l'interface de gestion.
+                Les solutions modernes de contrôle d'accès remplacent avantageusement les clés traditionnelles. Grâce à la <strong>gestion cloud centralisée</strong>, vous pilotez les accès de tous vos sites en temps réel depuis votre smartphone. Un badge perdu ou un accès à révoquer se gère en un clic, assurant une réactivité immédiate face aux risques.
               </p>
               <p>
-                Chez HD Connect, nous concevons des systèmes sur mesure qui s'intègrent parfaitement à votre organisation. Nos solutions sont <strong>évolutives</strong> : vous pouvez commencer avec quelques portes et étendre progressivement à l'ensemble de vos sites.
+                Chez HD Connect, nous concevons des systèmes sur mesure qui s'intègrent parfaitement à votre organisation. Nos solutions sont <strong>évolutives et interopérables</strong> avec vos systèmes de vidéosurveillance et d'alarme pour une sécurité globale cohérente.
               </p>
-            </>} delay={0} />
+              <p>
+                L'IA permet également une <strong>analyse prédictive des flux</strong>, vous alertant en cas de comportement anormal ou de tentative d'accès non autorisée répétée, renforçant ainsi la protection de vos zones sensibles.
+              </p>
+              <p>
+                De l'interphone vidéo IP à la gestion biométrique, nous vous garantissons une installation conforme aux normes en vigueur et un service de maintenance réactif. En cas de panne critique, notre service d'urgence vous assure une **intervention sur site Urgence** en Île-de-France.
+              </p>
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-100">
+                  <p class="text-emerald-900 font-semibold mb-2">Vidéosurveillance IA</p>
+                  <p class="text-emerald-800/70 text-xs mb-4">Identifiez visuellement chaque accès avec nos caméras 4K.</p>
+                  <Link to="/services/videosurveillance">
+                    <Button variant="outline" size="sm" className="w-full border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all group">
+                      Voir la Vidéo IA
+                      <Camera className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+                <div class="p-5 bg-teal-50 rounded-xl border border-teal-100">
+                  <p class="text-teal-900 font-semibold mb-2">Maison Connectée</p>
+                  <p class="text-teal-800/70 text-xs mb-4">Pilotez vos accès et votre confort depuis une interface unique.</p>
+                  <Link to="/services/domotique">
+                    <Button variant="outline" size="sm" className="w-full border-teal-200 hover:bg-teal-500 hover:text-white transition-all group">
+                      Domotique Smart
+                      <Home className="ml-2 w-3 h-3 group-hover:translate-y-[-2px] transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </>
+          }
+          delay={0}
+        />
 
         {/* SECTION FONCTIONNALITÉS */}
         <section className="section-padding bg-secondary/30">
@@ -413,7 +444,7 @@ const ControleAcces = () => {
                 Demandez Votre Audit d'Accès Gratuit
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude technique offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude technique offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" onClick={() => scrollToSection("quote", {

@@ -28,15 +28,15 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroDomotiqueImage from "@/assets/hero-domotique.jpg";
-import domotiqueTabletImage from "@/assets/domotique-tablet-wall.jpg";
-import domotiqueLightSwitchImage from "@/assets/domotique-light-smart.jpg";
-import domotiqueThermostatImage from "@/assets/domotique-thermostat.jpg";
-import domotiqueMaisonImage from "@/assets/domotique-maison-particulier.jpg";
+import heroDomotiqueImage from "@/assets/hero-domotique.webp";
+import domotiqueTabletImage from "@/assets/domotique-tablet-wall.webp";
+import domotiqueLightSwitchImage from "@/assets/domotique-light-smart.webp";
+import domotiqueThermostatImage from "@/assets/domotique-thermostat.webp";
+import domotiqueMaisonImage from "@/assets/domotique-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryDomotiqueTablet from "@/assets/gallery-domotique-tablet.jpg";
-import galleryDomotiqueSwitch from "@/assets/gallery-domotique-switch.jpg";
-import galleryDomotiqueScene from "@/assets/gallery-domotique-scene.jpg";
+import galleryDomotiqueTablet from "@/assets/gallery-domotique-tablet.webp";
+import galleryDomotiqueSwitch from "@/assets/gallery-domotique-switch.webp";
+import galleryDomotiqueScene from "@/assets/gallery-domotique-scene.webp";
 
 const Domotique = () => {
   const { domotique } = content.pageServices;
@@ -44,9 +44,9 @@ const Domotique = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Factures énergie trop élevées ? Domotique intelligente -30% | HD Connect",
-    description: "Réduisez vos factures de 15 à 30% avec une maison connectée. Automatisation éclairage, chauffage, volets. Contrôle smartphone. Installation garantie 5 ans.",
-    keywords: "domotique, maison intelligente, smart home, économies énergie, automatisation, KNX, Z-Wave, Zigbee, HD Connect",
+    title: "Domotique Intelligente & Maison Connectée 2025-2026 | Économies d'Énergie IA | HD Connect",
+    description: "Optimisez votre confort et réduisez vos factures de 30% avec la domotique intelligente pilotée par IA. Installation KNX, Z-Wave, Zigbee. Devis gratuit rapidement.",
+    keywords: "domotique intelligente 2025-2026, maison connectée IA, économies énergie domotique, installation KNX professionnel, pilotage chauffage smartphone, HD Connect",
     canonicalUrl: "https://hdconnect.fr/services/domotique",
   });
 
@@ -125,7 +125,7 @@ const Domotique = () => {
         serviceName="Installation Domotique et Maison Intelligente"
         serviceDescription="Expert en installation de systèmes domotiques KNX, Z-Wave et Zigbee. Maison intelligente, automatisation sécurité, gestion énergétique. Intervention sur toute la France."
         serviceUrl="/services/domotique"
-        serviceImage="/assets/service-domotique.jpg"
+        serviceImage="/assets/service-domotique.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -146,23 +146,51 @@ const Domotique = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Installer un Système Domotique ?"
-          badge="Maison Intelligente"
+          title="Pourquoi Passer à la Domotique Intelligente pilotée par IA en 2025-2026 ?"
+          badge="Maison Connectée & IA"
           badgeIcon={<Smartphone className="w-4 h-4" />}
           imagePosition="right"
           image={domotiqueTabletImage}
-          imageAlt="Contrôle domotique sur tablette dans un salon moderne connecté"
+          imageAlt="Interface de contrôle domotique intelligente sur tablette murale affichant la gestion énergétique et la sécurité d'une maison connectée"
           content={
             <>
               <p>
                 La domotique est devenue un élément incontournable du confort moderne. En France, plus de 40% des nouveaux logements intègrent au moins un système domotique, et cette tendance s'accélère avec les obligations réglementaires de performance énergétique (RT2012, RE2020). Un système domotique bien conçu peut réduire votre consommation énergétique de <strong>15 à 30%</strong>.
               </p>
               <p>
+                En 2025-2026, HD Connect franchit une nouvelle étape avec l'intégration de l'<strong>Intelligence Artificielle générative</strong> dans votre habitat. Nos systèmes apprennent vos habitudes de vie pour optimiser automatiquement le chauffage, l'éclairage et la sécurité sans intervention manuelle, garantissant un confort maximal tout en minimisant l'empreinte carbone.
+              </p>
+              <p>
+                L'optimisation énergétique est au cœur de nos solutions. Grâce à la <strong>régulation intelligente par IA</strong>, vous pouvez réaliser des économies allant jusqu'à 30% sur votre facture de chauffage et d'électricité, tout en respectant les normes environnementales les plus strictes (RE2020).
+              </p>
+              <p>
                 Chez HD Connect, nous concevons des solutions domotiques sur mesure adaptées à chaque configuration. Nos systèmes combinent des technologies éprouvées (KNX filaire pour le neuf, Z-Wave et Zigbee sans fil pour la rénovation) avec une intégration complète de vos systèmes de sécurité existants.
               </p>
               <p>
-                Notre approche privilégie le <strong>contrôle local de vos données</strong>. Contrairement aux solutions cloud propriétaires, nos systèmes fonctionnent avec un serveur domotique chez vous, garantissant votre indépendance et la pérennité de votre investissement.
+                Notre approche privilégie le <strong>contrôle local de vos données</strong>. Contrairement aux solutions cloud propriétaires, nos systèmes fonctionnent avec un serveur domotique chez vous, garantissant votre indépendance et la pérennité de votre investissement. En cas de dysfonctionnement, notre service de maintenance vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="p-5 bg-purple-50 rounded-xl border border-purple-100">
+                  <p class="text-purple-900 font-semibold mb-2">Sécurité Intégrée</p>
+                  <p class="text-purple-800/70 text-xs mb-4">Automatisez votre alarme avec vos scénarios de vie.</p>
+                  <Link to="/services/alarme">
+                    <Button variant="outline" size="sm" className="w-full border-purple-200 hover:bg-purple-500 hover:text-white transition-all group">
+                      Voir les Alarmes
+                      <ShieldAlert className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+                <div class="p-5 bg-violet-50 rounded-xl border border-violet-100">
+                  <p class="text-violet-900 font-semibold mb-2">Accès Connectés</p>
+                  <p class="text-violet-800/70 text-xs mb-4">Ouvrez votre porte à distance via votre système domotique.</p>
+                  <Link to="/services/controle-acces">
+                    <Button variant="outline" size="sm" className="w-full border-violet-200 hover:bg-violet-500 hover:text-white transition-all group">
+                      Contrôle d'Accès
+                      <Lock className="ml-2 w-3 h-3 group-hover:translate-y-[-2px] transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </>
           }
           delay={0}
@@ -416,7 +444,7 @@ const Domotique = () => {
                 Demandez Votre Étude Domotique Gratuite
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude technique offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude technique offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

@@ -14,7 +14,7 @@ const Header = () => {
       { label: "À Propos", id: "about" },
       { label: "Zones d'intervention", id: "zones", isLink: true, href: "/zones-intervention" },
       { label: "Blog", id: "blog", isLink: true, href: "/blog" },
-      { label: "Contact", id: "contact" },
+	      { label: "Contact", id: "contact" },
     ],
     [],
   );
@@ -25,7 +25,8 @@ const Header = () => {
       scrollToSection("quote", { mode: "quote" });
       return;
     }
-    scrollToSection(id);
+
+	      scrollToSection(id);
   };
 
   return (
@@ -42,7 +43,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+	          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               link.isLink ? (
                 <Link
@@ -54,12 +55,12 @@ const Header = () => {
                 </Link>
               ) : (
                 <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className="text-foreground hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </button>
+	                  key={link.id}
+	                  onClick={() => handleNavClick(link.id)}
+	                  className={`text-foreground hover:text-primary transition-colors ${link.isUrgency ? 'font-bold text-red-600 hover:text-red-700' : ''}`}
+	                >
+	                  {link.label}
+	                </button>
               )
             ))}
           </nav>

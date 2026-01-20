@@ -22,7 +22,7 @@ export const citiesData: CityData[] = [
     region: "Île-de-France",
     regionSlug: "ile-de-france",
     population: "2,1 millions",
-    description: "HD Connect, votre expert en sécurité à Paris. Installation de systèmes de vidéosurveillance, alarmes anti-intrusion, contrôle d'accès et domotique pour particuliers et professionnels. Intervention rapide dans tous les arrondissements parisiens.",
+    description: "Atteignez le Top 3 Sécurité à Paris en 2025-2026. HD Connect, expert certifié NF&A2P, installe des systèmes de vidéosurveillance IA 4K et des alarmes intelligentes. Audit gratuit, intervention 4h urgence dans tous les arrondissements.",
     neighborhoods: ["Le Marais", "Montmartre", "Saint-Germain", "Bastille", "Belleville", "Auteuil", "Passy", "Nation", "République", "Opéra", "Châtelet", "La Défense"],
     nearbyTowns: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Vincennes", "Saint-Denis", "Montreuil"]
   },
@@ -34,7 +34,7 @@ export const citiesData: CityData[] = [
     region: "Île-de-France",
     regionSlug: "ile-de-france",
     population: "92 000",
-    description: "HD Connect intervient à Créteil et dans tout le Val-de-Marne pour vos installations de sécurité : caméras de surveillance, systèmes d'alarme, contrôle d'accès. Devis gratuit et intervention sous 24h.",
+    description: "HD Connect intervient à Créteil et dans tout le Val-de-Marne pour vos installations de sécurité : caméras de surveillance, systèmes d'alarme, contrôle d'accès. Devis gratuit et intervention rapide.",
     neighborhoods: ["Centre-Ville", "Mont-Mesly", "La Source", "Préfecture", "L'Échat", "Bords de Marne"],
     nearbyTowns: ["Maisons-Alfort", "Saint-Maur-des-Fossés", "Alfortville", "Choisy-le-Roi", "Bonneuil-sur-Marne"]
   },
@@ -95,7 +95,7 @@ export const citiesData: CityData[] = [
     region: "Auvergne-Rhône-Alpes",
     regionSlug: "auvergne-rhone-alpes",
     population: "522 000",
-    description: "HD Connect à Lyon : expert en sécurité électronique. Installation de caméras de surveillance, alarmes anti-intrusion, contrôle d'accès biométrique. Intervention dans tous les arrondissements lyonnais.",
+    description: "Sécurité 2025-2026 à Lyon : HD Connect vous propulse au Top 3. Installation de vidéosurveillance IA 4K, contrôle d'accès biométrique et alarmes APSAD. Expertise reconnue en Auvergne-Rhône-Alpes. Devis gratuit rapidement.",
     neighborhoods: ["Presqu'île", "Vieux Lyon", "Part-Dieu", "Croix-Rousse", "Confluence", "Gerland", "Villeurbanne"],
     nearbyTowns: ["Villeurbanne", "Vénissieux", "Caluire-et-Cuire", "Saint-Priest", "Vaulx-en-Velin", "Bron"]
   },
@@ -132,7 +132,7 @@ export const citiesData: CityData[] = [
     region: "Provence-Alpes-Côte d'Azur",
     regionSlug: "provence-alpes-cote-d-azur",
     population: "870 000",
-    description: "HD Connect à Marseille : votre partenaire sécurité. Vidéosurveillance professionnelle, systèmes d'alarme, contrôle d'accès pour résidences et entreprises. Devis gratuit, intervention rapide.",
+    description: "HD Connect, votre partenaire Top 3 Sécurité à Marseille. Installation de systèmes d'alarme NF&A2P et vidéosurveillance IA. Protection optimale pour résidences et entreprises en PACA. Intervention rapide et garantie 5 ans.",
     neighborhoods: ["Vieux-Port", "Joliette", "Prado", "Castellane", "La Valentine", "Les Catalans", "Endoume"],
     nearbyTowns: ["Aix-en-Provence", "Aubagne", "Martigues", "Vitrolles", "Marignane", "La Ciotat"]
   },
@@ -231,7 +231,7 @@ export const citiesData: CityData[] = [
     region: "Hauts-de-France",
     regionSlug: "hauts-de-france",
     population: "236 000",
-    description: "Expert sécurité à Lille. HD Connect installe vos systèmes de vidéosurveillance, alarmes et contrôle d'accès. Protection optimale pour résidences et locaux professionnels dans le Nord.",
+    description: "Expert sécurité à Lille. HD Connect installe vos systèmes de vidéosurveillance, alarmes et contrôle d'accès. Protection optimale pour résidences et locaux professionnels dans le Nord. **Intervention Rapide** possible.",
     neighborhoods: ["Vieux-Lille", "Wazemmes", "Vauban", "Centre", "Bois-Blancs", "Fives"],
     nearbyTowns: ["Roubaix", "Tourcoing", "Villeneuve-d'Ascq", "Marcq-en-Barœul", "Lambersart", "Wasquehal"]
   },
@@ -243,7 +243,7 @@ export const citiesData: CityData[] = [
     region: "Hauts-de-France",
     regionSlug: "hauts-de-france",
     population: "134 000",
-    description: "HD Connect Amiens : sécurité électronique pour entreprises et particuliers. Vidéosurveillance, alarmes certifiées, intervention rapide Somme.",
+    description: "HD Connect Amiens : sécurité électronique pour entreprises et particuliers. Vidéosurveillance, alarmes certifiées, intervention rapide Somme. **Intervention Rapide** possible.",
     neighborhoods: ["Centre-Ville", "Saint-Leu", "Henriville", "Saint-Acheul", "Etouvie"],
     nearbyTowns: ["Longueau", "Rivery", "Camon", "Dury", "Salouël"]
   },

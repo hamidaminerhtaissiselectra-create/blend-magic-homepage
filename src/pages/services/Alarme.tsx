@@ -28,15 +28,15 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroAlarmeImage from "@/assets/hero-alarme.jpg";
-import alarmPanelImage from "@/assets/alarme-panel-modern.jpg";
-import alarmMotionSensorImage from "@/assets/alarm-motion-sensor.jpg";
-import alarmSirenOutdoorImage from "@/assets/alarme-sirene-exterieur.jpg";
-import alarmeMaisonImage from "@/assets/alarme-maison-particulier.jpg";
+import heroAlarmeImage from "@/assets/hero-alarme.webp";
+import alarmPanelImage from "@/assets/alarme-panel-modern.webp";
+import alarmMotionSensorImage from "@/assets/alarm-motion-sensor.webp";
+import alarmSirenOutdoorImage from "@/assets/alarme-sirene-exterieur.webp";
+import alarmeMaisonImage from "@/assets/alarme-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryAlarmKeypad from "@/assets/gallery-alarm-keypad.jpg";
-import galleryAlarmPir from "@/assets/gallery-alarm-pir.jpg";
-import galleryAlarmSiren from "@/assets/gallery-alarm-siren.jpg";
+import galleryAlarmKeypad from "@/assets/gallery-alarm-keypad.webp";
+import galleryAlarmPir from "@/assets/gallery-alarm-pir.webp";
+import galleryAlarmSiren from "@/assets/gallery-alarm-siren.webp";
 
 const Alarme = () => {
   const { alarme } = content.pageServices;
@@ -44,9 +44,9 @@ const Alarme = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Victime de cambriolage ? Alarme NF&A2P certifiée assurances | HD Connect",
-    description: "Protégez votre maison ou entreprise avec une alarme NF&A2P reconnue assurances. Télésurveillance 24/7, intervention sous 15 min. Devis gratuit sous 24h.",
-    keywords: "alarme maison, alarme intrusion, détecteur mouvement, sirène, télésurveillance, NF&A2P, HD Connect, protection cambriolage",
+    title: "Installation Alarme Anti-Intrusion NF&A2P Certifiée 2025-2026 | Télésurveillance 24/7 | HD Connect",
+    description: "Expert en installation d'alarmes NF&A2P intelligentes avec détection IA. Protection maison et entreprise, télésurveillance APSAD 24/7. Devis gratuit rapidement.",
+    keywords: "installation alarme 2025-2026, alarme NF&A2P, alarme intelligente IA, télésurveillance APSAD, protection intrusion maison, HD Connect, sécurité électronique",
     canonicalUrl: "https://hdconnect.fr/services/alarme",
   });
 
@@ -100,9 +100,9 @@ const Alarme = () => {
 
   const advantages = [
     { icon: Award, title: "Certification NF&A2P", description: "Équipements certifiés conformes aux exigences des assureurs. Réduction de prime jusqu'à 10% sur votre contrat habitation." },
-    { icon: Zap, title: "Installation Express 48h", description: "De l'audit à la mise en service en moins de 48h. Intervention d'urgence possible le jour même en Île-de-France." },
+    { icon: Zap, title: "Installation Express 48h", description: "De l'audit à la mise en service en les meilleurs délais. Intervention d'urgence possible le jour même en Île-de-France." },
     { icon: Lock, title: "Garantie 5 Ans", description: "Garantie constructeur étendue sur tous les équipements. Pièces et main d'œuvre incluses pendant 5 ans." },
-    { icon: Clock, title: "Support 24/7 Dédié", description: "Hotline technique disponible 24h/24, 7j/7. Intervention sur site sous 4h en cas de panne critique." },
+    { icon: Clock, title: "Support 24/7 Dédié", description: "Hotline technique disponible 24h/24, 7j/7. Intervention sur site Urgence en cas de panne critique." },
   ];
 
   return (
@@ -125,7 +125,7 @@ const Alarme = () => {
         serviceName="Installation Alarme Anti-Intrusion Certifiée"
         serviceDescription="Expert en installation de systèmes d'alarme anti-intrusion certifiés NF&A2P pour particuliers et professionnels. Télésurveillance 24/7, contrôle smartphone, conformité assurance. Intervention sur toute la France."
         serviceUrl="/services/alarme"
-        serviceImage="/assets/service-alarm.jpg"
+        serviceImage="/assets/service-alarm.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -146,12 +146,12 @@ const Alarme = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Installer une Alarme Anti-Intrusion ?"
-          badge="Protection Maximale"
+          title="Pourquoi Installer une Alarme Anti-Intrusion Intelligente en 2025-2026 ?"
+          badge="Protection IA & Certification"
           badgeIcon={<ShieldAlert className="w-4 h-4" />}
           imagePosition="right"
           image={alarmPanelImage}
-          imageAlt="Panneau de contrôle d'alarme moderne avec clavier tactile"
+          imageAlt="Système d'alarme anti-intrusion NF&A2P certifié avec panneau de contrôle tactile et détection intelligente par IA pour la sécurité de la maison"
           content={
             <>
               <p>
@@ -161,8 +161,23 @@ const Alarme = () => {
                 Chez HD Connect, nous installons exclusivement des systèmes certifiés <strong>NF&A2P</strong> (Norme Française - Assurance Prévention Protection), la référence en matière de sécurité électronique en France. Cette certification garantit la fiabilité des équipements et leur résistance aux tentatives de neutralisation.
               </p>
               <p>
-                Nos systèmes d'alarme modernes intègrent des <strong>détecteurs de mouvement à double technologie</strong> (infrarouge + hyperfréquence) qui différencient les intrus des animaux domestiques, éliminant ainsi les fausses alertes.
+                Nos systèmes d'                Cette technologie de <strong>détection intelligente par IA</strong> permet également une levée de doute vidéo instantanée : en cas d'alerte, vous recevez une séquence vidéo HD sur votre smartphone, permettant d'identifier immédiatement la nature de l'événement et de déclencher l'intervention des forces de l'ordre si nécessaire.
               </p>
+              <p>
+                Enfin, pour une protection complète, HD Connect propose une connexion à un centre de <strong>Télésurveillance APSAD 24/7</strong>. En cas d'alerte confirmée, nous garantissons l'appel des forces de l'ordre et une <strong>intervention sur site Urgence</strong>, assurant une réactivité maximale et une tranquillité d'esprit totale.
+              </p>
+              <div class="mt-6 p-6 bg-red-50 rounded-xl border border-red-100">
+                <p class="text-red-900 font-semibold mb-3">Complétez votre sécurité</p>
+                <p class="text-red-800/80 text-sm mb-4">
+                  Pour une levée de doute visuelle encore plus performante, découvrez comment nos systèmes de caméras intelligentes s'interfacent avec votre alarme.
+                </p>
+                <Link to="/services/videosurveillance">
+                  <Button variant="outline" className="border-red-200 hover:bg-red-500 hover:text-white transition-all group">
+                    Découvrir la Vidéosurveillance IA
+                    <Eye className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
             </>
           }
           delay={0}
@@ -238,8 +253,8 @@ const Alarme = () => {
         {/* IMAGE BREAK STRATÉGIQUE */}
         <ImageBreak 
           image={alarmSirenOutdoorImage}
-          alt="Sirène d'alarme extérieure installée par HD Connect"
-          caption="Dissuasion maximale avec nos sirènes flash extérieures haute puissance"
+          alt="Sirène d'alarme extérieure haute puissance avec flash LED stroboscopique et protection anti-sabotage installée sur une façade de maison"
+          caption="Dissuasion maximale avec nos sirènes flash extérieures haute puissance certifiées NF&A2P"
         />
 
         {/* CTA INTERMÉDIAIRE - VERSION COLORÉE */}
@@ -259,7 +274,7 @@ const Alarme = () => {
           stats={[
             { value: "-80%", label: "Cambriolages évités", description: "grâce à une alarme visible" },
             { value: "NF&A2P", label: "Certification", description: "reconnue assureurs" },
-            { value: "48h", label: "Installation", description: "mise en service express" },
+            { value: "Urgence", label: "Installation", description: "mise en service express" },
             { value: "5 ans", label: "Garantie", description: "pièces et main d'œuvre" },
           ]}
           variant="alarme"
@@ -400,7 +415,7 @@ const Alarme = () => {
                 Demandez Votre Audit de Sécurité Gratuit
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude technique offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude technique offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

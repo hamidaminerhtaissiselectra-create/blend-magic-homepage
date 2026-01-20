@@ -125,7 +125,7 @@ export const generateCityServiceContent = (serviceSlug: string, cityName: string
     localAdvantages: [
       `Intervention rapide à ${city.name} et environs`,
       `Techniciens certifiés basés en ${city.region}`,
-      `Devis gratuit sous 24h pour ${city.name} (${city.dept})`,
+      `Devis gratuit rapidement pour ${city.name} (${city.dept})`,
       `Service après-vente local et réactif`,
     ],
   };

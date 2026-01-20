@@ -28,14 +28,14 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroMaintenanceImage from "@/assets/hero-maintenance.jpg";
-import maintenanceTechImage from "@/assets/maintenance-check-panel.jpg";
-import maintenanceDiagnosticImage from "@/assets/maintenance-diagnostic.jpg";
-import maintenanceTeamImage from "@/assets/maintenance-equipe-terrain.jpg";
+import heroMaintenanceImage from "@/assets/hero-maintenance.webp";
+import maintenanceTechImage from "@/assets/maintenance-check-panel.webp";
+import maintenanceDiagnosticImage from "@/assets/maintenance-diagnostic.webp";
+import maintenanceTeamImage from "@/assets/maintenance-equipe-terrain.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryMaintenanceDiag from "@/assets/gallery-maintenance-diag.jpg";
-import galleryMaintenanceRepair from "@/assets/gallery-maintenance-repair.jpg";
-import galleryMaintenanceVan from "@/assets/gallery-maintenance-van.jpg";
+import galleryMaintenanceDiag from "@/assets/gallery-maintenance-diag.webp";
+import galleryMaintenanceRepair from "@/assets/gallery-maintenance-repair.webp";
+import galleryMaintenanceVan from "@/assets/gallery-maintenance-van.webp";
 
 const Maintenance = () => {
   const { maintenance } = content.pageServices;
@@ -43,9 +43,9 @@ const Maintenance = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Panne sécurité ? Dépannage & maintenance 24/7 | HD Connect",
-    description: "Intervention rapide garantie sur vos équipements de sécurité. Support 24/7, contrats maintenance préventive, pièces garanties. Ne restez pas sans protection.",
-    keywords: "maintenance sécurité, dépannage alarme, réparation caméra, contrat maintenance, support 24/7, intervention express, HD Connect",
+    title: "Maintenance Sécurité & Dépannage Alarme/Vidéo 2025-2026 | Support IA 24/7 | HD Connect",
+    description: "Expert en maintenance préventive et dépannage express 2025-2026. Support technique IA 24/7, intervention rapide, pièces d'origine garanties. Sécurisez vos installations.",
+    keywords: "maintenance sécurité 2025-2026, dépannage alarme express, réparation vidéosurveillance, contrat maintenance SLA, support technique IA, HD Connect, sécurité électronique",
     canonicalUrl: "https://hdconnect.fr/services/maintenance",
   });
 
@@ -58,7 +58,7 @@ const Maintenance = () => {
 
   const features = [
     { icon: Clock, title: "Support 24/7 Prioritaire", description: "Assistance technique disponible à tout moment avec hotline dédiée, réponse immédiate et intervention rapide même les nuits, week-ends et jours fériés." },
-    { icon: PhoneCall, title: "Intervention Garantie Express", description: "Délai d'intervention contractuel (4h, 8h ou 24h selon votre formule) pour maintenir votre sécurité opérationnelle sans interruption prolongée." },
+    { icon: PhoneCall, title: "Intervention Garantie Express", description: "Délai d'intervention contractuel  pour maintenir votre sécurité opérationnelle sans interruption prolongée." },
     { icon: CheckCircle, title: "Maintenance Préventive Complète", description: "Contrôles réguliers exhaustifs pour prévenir les pannes : nettoyage, vérification des connexions, tests complets, rapport détaillé après chaque visite." },
     { icon: TrendingUp, title: "Mises à Jour Firmware Incluses", description: "Installation des dernières mises à jour firmware et patches de sécurité pour une performance optimale et une protection contre les vulnérabilités." },
   ];
@@ -81,7 +81,7 @@ const Maintenance = () => {
       icon: Building, 
       title: "Entreprises et Bureaux", 
       description: "Contrats de maintenance préventive pour les systèmes critiques. Visites régulières, monitoring proactif et intervention rapide en cas de problème.",
-      features: ["Visites semestrielles", "Monitoring 24/7", "Intervention 4h garantie", "Rapports détaillés"]
+      features: ["Visites semestrielles", "Monitoring 24/7", "Intervention Rapide garantie", "Rapports détaillés"]
     },
     { 
       icon: Store, 
@@ -101,7 +101,7 @@ const Maintenance = () => {
     { icon: Award, title: "Techniciens Certifiés", description: "Tous nos techniciens sont certifiés par les constructeurs (Hikvision, Dahua, Axis, etc.) avec plus de 5 ans d'expérience en maintenance." },
     { icon: Zap, title: "Pièces d'Origine Garanties", description: "Utilisation exclusive de pièces d'origine avec garantie constructeur. Aucune pièce contrefaite ou de mauvaise qualité." },
     { icon: Shield, title: "Contrats Flexibles", description: "Contrats adaptés à votre budget et vos besoins : maintenance annuelle, semestrielle, mensuelle ou à la demande." },
-    { icon: Clock, title: "Intervention Garantie", description: "Délai d'intervention contractuel (4h, 8h ou 24h) avec pénalité financière en cas de non-respect. Votre sécurité est notre priorité." },
+    { icon: Clock, title: "Intervention Garantie", description: "Délai d'intervention contractuel  avec pénalité financière en cas de non-respect. Votre sécurité est notre priorité." },
   ];
 
   return (
@@ -124,7 +124,7 @@ const Maintenance = () => {
         serviceName="Maintenance et Dépannage Systèmes de Sécurité"
         serviceDescription="Expert en maintenance préventive et dépannage de systèmes de sécurité : alarme, vidéosurveillance, contrôle d'accès. Support 24/7, intervention express, contrats SLA. Intervention sur toute la France."
         serviceUrl="/services/maintenance"
-        serviceImage="/assets/service-maintenance.jpg"
+        serviceImage="/assets/service-maintenance.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -145,22 +145,28 @@ const Maintenance = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Souscrire à un Contrat de Maintenance ?"
-          badge="Support 24/7"
+          title="Pourquoi Choisir la Maintenance Préventive Intelligente en 2025-2026 ?"
+          badge="Support IA & Réactivité"
           badgeIcon={<Wrench className="w-4 h-4" />}
           imagePosition="right"
           image={maintenanceTechImage}
-          imageAlt="Technicien effectuant la maintenance d'un système de sécurité"
+          imageAlt="Technicien expert certifié effectuant un diagnostic technique approfondi sur un panneau de contrôle d'alarme avec outils de mesure numériques"
           content={
             <>
               <p>
                 La maintenance préventive des systèmes de sécurité est souvent négligée, jusqu'au jour où une panne survient. Or, une caméra défaillante ou une alarme non fonctionnelle peuvent coûter bien plus cher qu'un contrat de maintenance annuel. Selon les assureurs, une panne de sécurité peut entraîner <strong>une augmentation de prime de 20 à 50%</strong>.
               </p>
               <p>
-                Chez HD Connect, nous proposons des contrats de maintenance adaptés à chaque profil : maintenance annuelle pour les résidences, contrats SLA pour les sites critiques, ou interventions à la demande. Notre approche privilégie la <strong>prévention plutôt que la réaction</strong>.
+                En 2025-2026, HD Connect révolutionne le support avec la <strong>télémaintenance assistée par IA</strong>. Nos systèmes surveillent en temps réel l'état de santé de vos équipements et détectent les signes avant-coureurs de défaillance (baisse de tension, perte de paquets réseau, usure batterie) avant même que la panne ne survienne.
               </p>
               <p>
-                Nous disposons d'un <strong>stock de pièces de rechange d'origine</strong> en permanence, permettant une intervention rapide en cas de défaillance. Aucune attente de commande, aucune perte de temps.
+                Chez HD Connect, nous proposons des contrats de maintenance adaptés à chaque profil : maintenance annuelle pour les résidences, contrats SLA pour les sites critiques, ou interventions à la demande. Notre approche privilégie la <strong>prévention intelligente plutôt que la réaction</strong>.
+              </p>
+              <p>
+                Nous disposons d'un <strong>stock de pièces de rechange d'origine</strong> en permanence, permettant une **intervention sur site Urgence** en Île-de-France en cas de défaillance critique, garantissant une continuité de service absolue.
+              </p>
+              <p>
+                Pour les entreprises, nos contrats de type **SLA (Service Level Agreement)** garantissent contractuellement un temps de rétablissement maximal, avec des pénalités en cas de non-respect. C'est l'assurance d'une sécurité opérationnelle 24/7, indispensable pour les sites critiques.
               </p>
             </>
           }
@@ -227,7 +233,7 @@ const Maintenance = () => {
                   <strong>Le monitoring proactif complète la maintenance</strong>. Nos systèmes envoient des alertes automatiques en cas d'anomalie détectée (caméra déconnectée, alarme désarmée, batterie faible). Nous contactons immédiatement le client pour résoudre le problème avant qu'il ne devienne critique.
                 </p>
                 <p>
-                  <strong>En cas de panne urgente</strong>, votre appel est traité en priorité. Nos techniciens interviennent dans le délai contractuel (4h, 8h ou 24h selon votre formule) avec diagnostic complet, pièces de rechange d'origine et mise en service rapide. Aucune attente, aucune improvisation.
+                  <strong>En cas de panne urgente</strong>, votre appel est traité en priorité. Nos techniciens interviennent dans le délai contractuel  avec diagnostic complet, pièces de rechange d'origine et mise en service rapide. Aucune attente, aucune improvisation.
                 </p>
               </div>
             </AnimatedSection>
@@ -249,7 +255,7 @@ const Maintenance = () => {
           variant="gradient"
           accentColor="maintenance"
           showBenefits={true}
-          urgencyText="Intervention garantie sous 4h"
+          urgencyText="Intervention garantie Urgence"
         />
 
         {/* STATISTIQUES CLÉS - FOND CLAIR COMME ACCUEIL */}
@@ -257,7 +263,7 @@ const Maintenance = () => {
           title="Maintenance Préventive en Chiffres"
           stats={[
             { value: "-70%", label: "Pannes évitées", description: "grâce à la prévention" },
-            { value: "4h", label: "Intervention", description: "délai garanti en IDF" },
+            { value: "Urgence", label: "Intervention", description: "délai garanti en IDF" },
             { value: "24/7", label: "Disponibilité", description: "support technique" },
             { value: "5 ans", label: "Garantie", description: "pièces et main d'œuvre" },
           ]}
@@ -320,7 +326,7 @@ const Maintenance = () => {
                 Demandez Votre Devis de Maintenance
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Audit technique gratuit, sans engagement.
+                Recevez une proposition personnalisée rapidement. Audit technique gratuit, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

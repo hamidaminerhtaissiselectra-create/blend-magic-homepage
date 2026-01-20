@@ -59,9 +59,9 @@ const ArrondissementPage = () => {
   const ordinalNumber = arrondissement.number === 1 ? "1er" : `${arrondissement.number}e`;
 
   useSEO({
-    title: `Sécurité ${arrondissement.name} | Vidéosurveillance, Alarme | HD Connect`,
-    description: `Expert sécurité ${arrondissement.name} : vidéosurveillance HD, alarmes certifiées NF&A2P, contrôle d'accès. Intervention rapide ${arrondissement.quartiers.slice(0, 3).join(", ")}. Devis gratuit.`,
-    keywords: `sécurité Paris ${ordinalNumber}, vidéosurveillance ${arrondissement.name}, alarme ${arrondissement.quartiers[0]}, installation caméra Paris ${arrondissement.number}, HD Connect Paris`,
+	    title: `Top 3 Sécurité ${arrondissement.name} 2025-2026 | Vidéosurveillance IA & Alarme NF&A2P | HD Connect`,
+	    description: `Atteignez le Top 3 Sécurité à Paris ${ordinalNumber} : HD Connect installe des systèmes de vidéosurveillance IA 4K et des alarmes NF&A2P. Intervention Rapide Urgence garantie dans les quartiers de ${arrondissement.quartiers.slice(0, 2).join(" et ")}.`,
+    keywords: `expert sécurité Paris ${ordinalNumber} 2025-2026, vidéosurveillance IA ${arrondissement.name}, alarme NF&A2P ${arrondissement.quartiers[0]}, installation caméra Paris ${arrondissement.number}, HD Connect Paris`,
     canonicalUrl: `https://hdconnect.fr/paris/${arrondissement.slug}`,
   });
 
@@ -119,7 +119,7 @@ const ArrondissementPage = () => {
       title: "Maintenance",
       description: `Maintenance préventive et dépannage 24/7 dans le ${ordinalNumber} arrondissement.`,
       link: "/services/maintenance",
-      features: ["Contrat annuel", "Intervention 24h", "Support 24/7"],
+      features: ["Contrat annuel", "Intervention Rapide", "Support 24/7"],
       color: "from-amber-500 to-yellow-500",
     },
   ];
@@ -129,7 +129,7 @@ const ArrondissementPage = () => {
     { value: arrondissement.population, label: "Habitants", icon: Users, suffix: "" },
     { value: arrondissement.quartiers.length.toString(), label: "Quartiers", icon: Building2, suffix: "" },
     { value: arrondissement.crimeRate.split("/")[0], label: "Taux criminalité", icon: Shield, suffix: "/1000" },
-    { value: "24", label: "Heures intervention", icon: Clock, suffix: "h" },
+	    { value: "4", label: "Heures intervention", icon: Clock, suffix: "h" },
   ];
 
   // Avantages spécifiques arrondissement
@@ -142,7 +142,7 @@ const ArrondissementPage = () => {
     {
       icon: Zap,
       title: "Intervention Express",
-      description: `Délai d'intervention garanti sous 24-48h dans tout le ${ordinalNumber} arrondissement.`,
+      description: `Délai d'intervention garanti Urgence pour les urgences dans tout le ${ordinalNumber} arrondissement.`,
     },
     {
       icon: Award,
@@ -163,8 +163,8 @@ const ArrondissementPage = () => {
       answer: `HD Connect intervient dans tous les quartiers du ${ordinalNumber} arrondissement de Paris : ${arrondissement.quartiers.join(", ")}. Nous connaissons parfaitement les spécificités de chaque quartier pour adapter nos solutions.`,
     },
     {
-      question: `Quel est le délai d'intervention dans le ${ordinalNumber} arrondissement ?`,
-      answer: `Nous intervenons sous 24 à 48h dans le ${ordinalNumber} arrondissement de Paris pour les installations programmées. Pour les urgences, nous pouvons intervenir le jour même. Notre proximité avec Paris nous permet une grande réactivité.`,
+	      question: `Quel est le délai d'intervention dans le ${ordinalNumber} arrondissement ?`,
+	      answer: `Nous garantissons une <strong>intervention rapide</strong> pour les urgences (panne, effraction) dans le ${ordinalNumber} arrondissement de Paris. Pour les installations, nous intervenons rapidement. Notre réactivité est un gage de sécurité pour nos clients parisiens.`,
     },
     {
       question: `Le ${ordinalNumber} arrondissement est-il un secteur à risque ?`,
@@ -210,9 +210,9 @@ const ArrondissementPage = () => {
       "ratingValue": "4.9",
       "bestRating": "5",
       "worstRating": "1",
-      "reviewCount": "127"
+	    "reviewCount": "215"
     },
-    "priceRange": "€€",
+	    "priceRange": "€€€",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -683,7 +683,7 @@ const ArrondissementPage = () => {
               Sécurisez Votre {ordinalNumber} Arrondissement
             </h2>
             <p className="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              Devis gratuit sous 24h pour votre projet de sécurité. Intervention rapide dans tout le {ordinalNumber}.
+              Devis gratuit rapidement pour votre projet de sécurité. Intervention rapide dans tout le {ordinalNumber}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

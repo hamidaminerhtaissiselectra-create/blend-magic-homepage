@@ -35,19 +35,19 @@ import {
 } from "@/components/ui/accordion";
 
 // Import des images locales des régions
-import ileDeFranceImg from "@/assets/regions/ile-de-france.jpg";
-import auvergneRhoneAlpesImg from "@/assets/regions/auvergne-rhone-alpes.jpg";
-import provenceAlpesCoteAzurImg from "@/assets/regions/provence-alpes-cote-d-azur.jpg";
-import nouvelleAquitaineImg from "@/assets/regions/nouvelle-aquitaine.jpg";
-import occitanieImg from "@/assets/regions/occitanie.jpg";
-import hautsDeFranceImg from "@/assets/regions/hauts-de-france.jpg";
-import grandEstImg from "@/assets/regions/grand-est.jpg";
-import paysDeLaLoireImg from "@/assets/regions/pays-de-la-loire.jpg";
-import bretagneImg from "@/assets/regions/bretagne.jpg";
-import normandieImg from "@/assets/regions/normandie.jpg";
-import bourgogneFrancheComteImg from "@/assets/regions/bourgogne-franche-comte.jpg";
-import centreValDeLoireImg from "@/assets/regions/centre-val-de-loire.jpg";
-import corseImg from "@/assets/regions/corse.jpg";
+import ileDeFranceImg from "@/assets/regions/ile-de-france.webp";
+import auvergneRhoneAlpesImg from "@/assets/regions/auvergne-rhone-alpes.webp";
+import provenceAlpesCoteAzurImg from "@/assets/regions/provence-alpes-cote-d-azur.webp";
+import nouvelleAquitaineImg from "@/assets/regions/nouvelle-aquitaine.webp";
+import occitanieImg from "@/assets/regions/occitanie.webp";
+import hautsDeFranceImg from "@/assets/regions/hauts-de-france.webp";
+import grandEstImg from "@/assets/regions/grand-est.webp";
+import paysDeLaLoireImg from "@/assets/regions/pays-de-la-loire.webp";
+import bretagneImg from "@/assets/regions/bretagne.webp";
+import normandieImg from "@/assets/regions/normandie.webp";
+import bourgogneFrancheComteImg from "@/assets/regions/bourgogne-franche-comte.webp";
+import centreValDeLoireImg from "@/assets/regions/centre-val-de-loire.webp";
+import corseImg from "@/assets/regions/corse.webp";
 
 const ZonesIntervention = () => {
   const { phoneNumber, callUrl } = usePhoneCall();
@@ -55,9 +55,9 @@ const ZonesIntervention = () => {
 
   // SEO selon le document - Title et Meta Description optimisés
   useSEO({
-    title: "Installation, Dépannage et Location de Sécurité en France : Vidéosurveillance, Alarmes, Contrôle d'Accès - HD Connect",
-    description: "HD Connect intervient dans les 13 régions françaises grâce à son réseau d'intervenants locaux. Experts en Vidéosurveillance, Alarmes et Contrôle d'Accès. Devis gratuit et intervention rapide.",
-    keywords: "installation sécurité France, vidéosurveillance nationale, alarme toute France, HD Connect régions, intervention sécurité, dépannage alarme, location caméra",
+    title: "Expert Sécurité 2025-2026 France | Vidéosurveillance IA & Alarme NF&A2P | HD Connect",
+    description: "Expert sécurité 2025-2026 : installation vidéosurveillance IA, alarmes NF&A2P et contrôle d'accès dans toute la France. Intervention express Urgence en Île-de-France.",
+    keywords: "expert sécurité France 2025-2026, installation vidéosurveillance IA, alarme NF&A2P nationale, HD Connect zones intervention, sécurité électronique France",
     canonicalUrl: "https://hdconnect.fr/zones-intervention",
   });
 
@@ -114,7 +114,7 @@ const ZonesIntervention = () => {
     },
     {
       question: "Quels sont les délais d'intervention selon ma localisation ?",
-      answer: "En Île-de-France : intervention sous 24 à 48h. Dans les grandes métropoles (Lyon, Marseille, Toulouse, etc.) : intervention sous 48 à 72h. Pour les autres zones : nous étudions chaque demande au cas par cas et vous communiquons un délai précis lors de votre prise de contact."
+      answer: "En Île-de-France : intervention rapidement. Dans les grandes métropoles (Lyon, Marseille, Toulouse, etc.) : intervention sous rapidement. Pour les autres zones : nous étudions chaque demande au cas par cas et vous communiquons un délai précis lors de votre prise de contact."
     },
     {
       question: "Y a-t-il des frais de déplacement supplémentaires ?",
@@ -207,7 +207,7 @@ const ZonesIntervention = () => {
             
             {/* H1 selon le document */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Couverture Nationale HD Connect : <span className="text-primary">Installation, Dépannage et Location</span> de Systèmes de Sécurité
+              Expert Sécurité 2025-2026 France : <span className="text-primary">Installation, Dépannage et Location IA</span>
             </h1>
             
             {/* Texte SAB selon le document */}

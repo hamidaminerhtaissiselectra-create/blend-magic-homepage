@@ -129,12 +129,12 @@ const CTAFloating = ({
         }} transition={{
           delay: 0.5
         }}>
-            <div className="flex items-center gap-3">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-foreground font-medium">
-                Nos techniciens sont disponibles maintenant
-              </span>
-            </div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-foreground font-medium">
+                  Urgence ? Intervention garantie Urgence en Île-de-France.
+                </span>
+              </div>
             
           </motion.div>
         </div>

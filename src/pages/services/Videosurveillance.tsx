@@ -28,15 +28,15 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroVideoImage from "@/assets/hero-videosurveillance.jpg";
-import videoInstallImage from "@/assets/vs-install-facade.jpg";
-import vsMonitoringImage from "@/assets/vs-monitoring-center.jpg";
-import vsInstallOutdoorImage from "@/assets/vs-installation-outdoor.jpg";
-import cameraMaisonImage from "@/assets/camera-maison-particulier.jpg";
+import heroVideoImage from "@/assets/hero-videosurveillance.webp";
+import videoInstallImage from "@/assets/vs-install-facade.webp";
+import vsMonitoringImage from "@/assets/vs-monitoring-center.webp";
+import vsInstallOutdoorImage from "@/assets/vs-installation-outdoor.webp";
+import cameraMaisonImage from "@/assets/camera-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryVsPtzCamera from "@/assets/gallery-vs-ptz-camera.jpg";
-import galleryVsControlRoom from "@/assets/gallery-vs-control-room.jpg";
-import galleryVsBulletOutdoor from "@/assets/gallery-vs-bullet-outdoor.jpg";
+import galleryVsPtzCamera from "@/assets/gallery-vs-ptz-camera.webp";
+import galleryVsControlRoom from "@/assets/gallery-vs-control-room.webp";
+import galleryVsBulletOutdoor from "@/assets/gallery-vs-bullet-outdoor.webp";
 
 const Videosurveillance = () => {
   const { videosurveillance } = content.pageServices;
@@ -44,9 +44,9 @@ const Videosurveillance = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "Peur des cambriolages ? Installation Vidéosurveillance HD/4K | HD Connect",
-    description: "Protégez votre maison ou commerce avec nos caméras HD/4K. Vision nocturne, accès mobile 24/7, IA intégrée. Devis gratuit sous 24h, intervention rapide partout en France.",
-    keywords: "vidéosurveillance, caméra surveillance, installation caméra, CCTV, caméra IP, NVR, DVR, HD Connect, sécurité vidéo, protection cambriolage",
+    title: "Installation Vidéosurveillance IA & Caméras 4K Ultra HD 2025-2026 | HD Connect",
+    description: "Expert en vidéosurveillance intelligente avec analyse IA. Caméras 4K, vision nocturne couleur, accès mobile 24/7. Installation certifiée pour particuliers et entreprises.",
+    keywords: "vidéosurveillance IA 2025-2026, caméra surveillance 4K, installation vidéosurveillance professionnelle, analyse vidéo intelligente, caméra IP Hikvision Dahua, HD Connect",
     canonicalUrl: "https://hdconnect.fr/services/videosurveillance",
   });
 
@@ -109,7 +109,7 @@ const Videosurveillance = () => {
 
   const advantages = [
     { icon: Award, title: "Expertise Certifiée", description: "Plus de 10 ans d'expérience et techniciens certifiés par les plus grandes marques (Hikvision, Dahua, Axis, Hanwha)." },
-    { icon: Zap, title: "Intervention Rapide", description: "Étude gratuite sous 48h et installation express. Dépannage d'urgence disponible 24h/24 en Île-de-France." },
+    { icon: Zap, title: "Intervention Rapide", description: "Étude gratuite rapidement et installation express. Dépannage d'urgence disponible 24h/24 en Île-de-France." },
     { icon: Lock, title: "Conformité Garantie", description: "Accompagnement complet pour la mise en conformité RGPD et CNIL : panneaux d'information, registres, durées de conservation." },
     { icon: Users, title: "Support Dédié", description: "Interlocuteur unique du devis à la maintenance. Support technique réactif par téléphone, email ou intervention sur site." },
   ];
@@ -134,7 +134,7 @@ const Videosurveillance = () => {
         serviceName="Installation Vidéosurveillance Professionnelle"
         serviceDescription="Expert en installation de systèmes de vidéosurveillance HD et 4K pour particuliers et professionnels. Caméras IP, NVR, accès mobile, analyse vidéo intelligente. Intervention sur toute la France."
         serviceUrl="/services/videosurveillance"
-        serviceImage="/assets/service-camera.jpg"
+        serviceImage="/assets/service-camera.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -155,23 +155,51 @@ const Videosurveillance = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Investir dans une Vidéosurveillance Professionnelle ?"
-          badge="Expertise Métier"
+          title="Pourquoi Choisir la Vidéosurveillance Intelligente par IA en 2025-2026 ?"
+          badge="IA & Haute Définition"
           badgeIcon={<Camera className="w-4 h-4" />}
           imagePosition="right"
           image={videoInstallImage}
-          imageAlt="Technicien installant une caméra de vidéosurveillance professionnelle"
+          imageAlt="Technicien expert installant une caméra dôme IP 4K avec analyse intelligente sur la façade d'un bâtiment professionnel"
           content={
             <>
               <p>
                 La vidéosurveillance est devenue un élément essentiel de la sécurité moderne. Selon les statistiques, <strong>les cambriolages diminuent de 60% dans les zones équipées de caméras visibles</strong>. Au-delà de la dissuasion, une vidéosurveillance professionnelle offre une preuve irréfutable en cas d'incident.
               </p>
               <p>
-                Chez HD Connect, nous installons des systèmes de vidéosurveillance dernière génération : caméras 4K ultra haute définition, analyse vidéo intelligente (IA), accès mobile sécurisé et stockage redondant. Chaque système est dimensionné selon vos besoins spécifiques et configuré pour la conformité RGPD/CNIL.
+                Chez HD Connect, nous installons des systèmes de vidéosurveillance 2025-2026 dotés d'une <strong>analyse vidéo intelligente (IA)</strong>. Contrairement aux systèmes classiques, nos caméras sont capables de distinguer un humain d'un véhicule ou d'un animal, réduisant drastiquement les fausses alertes et permettant une recherche rapide dans les enregistrements par critères (couleur de vêtement, type de véhicule).
               </p>
               <p>
-                Notre approche privilégie la <strong>prévention et la dissuasion</strong>. Une caméra visible décourage les malfaiteurs. Une caméra discrète capture les preuves. Nous combinons les deux stratégies pour une sécurité maximale.
+                Nos solutions incluent des caméras 4K ultra haute définition avec technologie <strong>Starlight</strong> pour une vision nocturne en couleur parfaite, un accès mobile sécurisé 24/7 et un stockage redondant conforme aux directives de la CNIL et du RGPD.
               </p>
+              <p>
+                L'installation est réalisée par nos techniciens certifiés, garantissant un câblage soigné et une configuration optimale. Nous vous accompagnons dans toutes les démarches administratives (déclaration CNIL, affichage légal) pour une tranquillité d'esprit totale. En cas de panne ou de dysfonctionnement, notre service de maintenance vous assure une **intervention sur site Urgence** en Île-de-France.
+              </p>
+              <p>
+                Cette <strong>sécurité proactive par IA</strong> permet non seulement de filmer, mais surtout d'anticiper les menaces grâce au franchissement de ligne virtuelle et à la détection d'intrusion périmétrique intelligente.
+              </p>
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="p-5 bg-blue-50 rounded-xl border border-blue-100">
+                  <p class="text-blue-900 font-semibold mb-2">Couplage Alarme</p>
+                  <p class="text-blue-800/70 text-xs mb-4">Renforcez votre protection avec une alarme certifiée NF&A2P.</p>
+                  <Link to="/services/alarme">
+                    <Button variant="outline" size="sm" className="w-full border-blue-200 hover:bg-blue-500 hover:text-white transition-all group">
+                      Voir les Alarmes
+                      <Bell className="ml-2 w-3 h-3 group-hover:rotate-12 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+                <div class="p-5 bg-cyan-50 rounded-xl border border-cyan-100">
+                  <p class="text-cyan-900 font-semibold mb-2">Gestion des Accès</p>
+                  <p class="text-cyan-800/70 text-xs mb-4">Contrôlez les entrées avec la biométrie et le cloud.</p>
+                  <Link to="/services/controle-acces">
+                    <Button variant="outline" size="sm" className="w-full border-cyan-200 hover:bg-cyan-500 hover:text-white transition-all group">
+                      Contrôle d'Accès
+                      <Lock className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </>
           }
           delay={0}
@@ -331,7 +359,7 @@ const Videosurveillance = () => {
                 Demandez Votre Étude Vidéosurveillance Gratuite
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude technique offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude technique offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

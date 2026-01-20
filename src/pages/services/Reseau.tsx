@@ -28,15 +28,15 @@ import ColoredProcessSteps from "@/components/ColoredProcessSteps";
 import TechnologiesGaranties from "@/components/TechnologiesGaranties";
 import GarantiesSection from "@/components/GarantiesSection";
 import BlogCTASection from "@/components/BlogCTASection";
-import heroReseauImage from "@/assets/hero-reseau.jpg";
-import networkServerImage from "@/assets/reseau-baie-cables.jpg";
-import reseauSwitchImage from "@/assets/reseau-switch.jpg";
-import reseauWifiImage from "@/assets/reseau-wifi-install.jpg";
-import reseauMaisonImage from "@/assets/reseau-maison-particulier.jpg";
+import heroReseauImage from "@/assets/hero-reseau.webp";
+import networkServerImage from "@/assets/reseau-baie-cables.webp";
+import reseauSwitchImage from "@/assets/reseau-switch.webp";
+import reseauWifiImage from "@/assets/reseau-wifi-install.webp";
+import reseauMaisonImage from "@/assets/reseau-maison-particulier.webp";
 // Gallery-specific images (unique to ServiceShowcase)
-import galleryReseauRack from "@/assets/gallery-reseau-rack.jpg";
-import galleryReseauSwitch from "@/assets/gallery-reseau-switch.jpg";
-import galleryReseauWifi from "@/assets/gallery-reseau-wifi.jpg";
+import galleryReseauRack from "@/assets/gallery-reseau-rack.webp";
+import galleryReseauSwitch from "@/assets/gallery-reseau-switch.webp";
+import galleryReseauWifi from "@/assets/gallery-reseau-wifi.webp";
 
 const Reseau = () => {
   const { reseau } = content.pageServices;
@@ -44,9 +44,9 @@ const Reseau = () => {
   const { scrollToSection } = useSmoothScroll();
 
   useSEO({
-    title: "WiFi lent ou instable ? Réseau professionnel WiFi 6E & fibre | HD Connect",
-    description: "Boostez votre connexion avec un réseau pro : WiFi 6E/7, câblage Cat 6A certifié, firewall. Finies les coupures ! Devis gratuit, intervention rapide.",
-    keywords: "réseau informatique, câblage RJ45, fibre optique, WiFi professionnel, Firewall, VPN, Cat 6A, Cat 7, HD Connect",
+    title: "Installation Réseau WiFi 7 & Câblage Cat 7 Professionnel 2025-2026 | HD Connect",
+    description: "Expert en infrastructure réseau haute performance 2025-2026. WiFi 7, câblage certifié Cat 7, sécurité Firewall IA. Connectivité stable et sécurisée pour entreprises.",
+    keywords: "installation réseau WiFi 7 2025-2026, câblage informatique Cat 7, réseau professionnel fibre, sécurité réseau IA, infrastructure IT entreprise, HD Connect",
     canonicalUrl: "https://hdconnect.fr/services/reseau",
   });
 
@@ -125,7 +125,7 @@ const Reseau = () => {
         serviceName="Installation Réseau Informatique Professionnel"
         serviceDescription="Expert en infrastructure réseau : câblage Cat 6A/7 certifié, WiFi 6E/7, Firewall UTM, VPN. Installation, configuration et maintenance pour entreprises et résidences. Intervention sur toute la France."
         serviceUrl="/services/reseau"
-        serviceImage="/assets/service-reseau.jpg"
+        serviceImage="/assets/service-reseau.webp"
         faqItems={faqItems}
         breadcrumbs={breadcrumbs}
       />
@@ -146,22 +146,28 @@ const Reseau = () => {
 
         {/* SECTION DESCRIPTION EXPERTE - 50/50 */}
         <ContentSection
-          title="Pourquoi Investir dans une Infrastructure Réseau Professionnelle ?"
-          badge="Performance Réseau"
+          title="Pourquoi Choisir une Infrastructure Réseau Haute Performance en 2025-2026 ?"
+          badge="Performance & Sécurité IA"
           badgeIcon={<Network className="w-4 h-4" />}
           imagePosition="right"
           image={networkServerImage}
-          imageAlt="Technicien intervenant sur baie de brassage serveur avec câbles réseau"
+          imageAlt="Technicien expert certifié intervenant sur une baie de brassage serveur haute densité avec câblage structuré Cat 7 et switchs 10Gbps"
           content={
             <>
               <p>
                 Un réseau informatique performant est le fondement de toute entreprise moderne. Une infrastructure réseau défaillante coûte en moyenne <strong>5 600 € par heure d'indisponibilité</strong> selon les études IDC. Au-delà des coûts directs, une mauvaise connectivité impacte la productivité.
               </p>
               <p>
-                Chez HD Connect, nous concevons des réseaux sur mesure adaptés à votre activité. Nos solutions combinent un <strong>câblage structuré certifié</strong> (Cat 6A/7 avec garantie 25 ans), un <strong>WiFi 6E/7 haute performance</strong> et une <strong>sécurité renforcée</strong> (Firewall UTM, VPN, segmentation VLAN).
+                En 2025-2026, HD Connect déploie des solutions de <strong>WiFi 7 et de câblage Cat 7</strong> permettant des débits allant jusqu'à 40 Gbps. Nos infrastructures intègrent désormais une <strong>sécurité réseau pilotée par IA</strong>, capable de détecter et de bloquer les cybermenaces en temps réel avant qu'elles n'atteignent vos serveurs.
               </p>
               <p>
-                Notre approche privilégie la <strong>scalabilité</strong> et la <strong>redondance</strong>. Votre réseau doit pouvoir croître sans refonte majeure et continuer de fonctionner même en cas de défaillance d'un composant.
+                Nos solutions combinent un <strong>câblage structuré certifié Fluke</strong> avec une garantie constructeur de 25 ans, assurant une pérennité maximale à votre investissement IT.
+              </p>
+              <p>
+                Notre approche privilégie la <strong>scalabilité et la redondance intelligente</strong>. Votre réseau est conçu pour supporter l'augmentation massive des flux de données liés à l'IA et au cloud computing, tout en garantissant une disponibilité de 99,99%.
+              </p>
+              <p>
+                Chaque installation de câblage est soumise à une <strong>certification Fluke</strong>, garantissant une performance maximale et une conformité aux normes internationales. Ce rapport de certification est un gage de qualité pour votre assurance et un prérequis pour les infrastructures critiques. En cas de panne critique, notre service d'urgence vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
             </>
           }
@@ -321,7 +327,7 @@ const Reseau = () => {
                 Demandez Votre Audit Réseau Gratuit
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Recevez une proposition personnalisée sous 48h. Étude technique offerte, sans engagement.
+                Recevez une proposition personnalisée rapidement. Étude technique offerte, sans engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 

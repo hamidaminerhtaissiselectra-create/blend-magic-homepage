@@ -16,18 +16,18 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { servicesSchema, organizationSchema, localBusinessSchema } from "@/data/structuredData";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import AnimatedSection from "@/components/AnimatedSection";
-import cameraImage from "@/assets/home-service-videosurveillance.jpg";
-import alarmImage from "@/assets/home-service-alarme.jpg";
-import accessImage from "@/assets/home-service-controle-acces.jpg";
-import maintenanceImage from "@/assets/home-service-maintenance.jpg";
-import reseauImage from "@/assets/home-service-reseau.jpg";
-import domotiqueImage from "@/assets/home-service-domotique.jpg";
-import antenneImage from "@/assets/home-service-antenne.jpg";
-import portailImage from "@/assets/home-service-portails.jpg";
-import locationImage from "@/assets/location-equipement-table.jpg";
-import heroServicesImage from "@/assets/hero-security.jpg";
-import technicianImage from "@/assets/technician-work.jpg";
-import controlRoomImage from "@/assets/control-room.jpg";
+import cameraImage from "@/assets/home-service-videosurveillance.webp";
+import alarmImage from "@/assets/home-service-alarme.webp";
+import accessImage from "@/assets/home-service-controle-acces.webp";
+import maintenanceImage from "@/assets/home-service-maintenance.webp";
+import reseauImage from "@/assets/home-service-reseau.webp";
+import domotiqueImage from "@/assets/home-service-domotique.webp";
+import antenneImage from "@/assets/home-service-antenne.webp";
+import portailImage from "@/assets/home-service-portails.webp";
+import locationImage from "@/assets/location-equipement-table.webp";
+import heroServicesImage from "@/assets/hero-security.webp";
+import technicianImage from "@/assets/technician-work.webp";
+import controlRoomImage from "@/assets/control-room.webp";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Camera,
@@ -115,9 +115,9 @@ const ServicesHub = () => {
   const contactInfo = content.company.contact;
 
   useSEO({
-    title: "Services Sécurité & Domotique | Installation, Maintenance, Location | HD Connect",
-    description: "Découvrez les 9 expertises HD Connect : vidéosurveillance HD/4K, alarmes NF&A2P, contrôle d'accès biométrique, domotique connectée, réseau, antennes, portails automatiques et location matériel. Devis gratuit, intervention France entière.",
-    keywords: "services sécurité électronique, installation vidéosurveillance, alarme maison professionnel, contrôle accès biométrique, domotique maison connectée, maintenance sécurité, câblage réseau informatique, antenne satellite TNT, portail automatique, location matériel sécurité",
+    title: "Expert Sécurité 2025-2026 | Vidéosurveillance IA, Alarme NF&A2P & Domotique | HD Connect",
+    description: "Expert sécurité 2025-2026 : installation vidéosurveillance IA, alarmes NF&A2P, contrôle d'accès biométrique et domotique intelligente. Maintenance 24/7 et location matériel dans toute la France.",
+    keywords: "expert sécurité 2025-2026, installation vidéosurveillance IA, alarme NF&A2P, contrôle accès biométrique, domotique intelligente, maintenance sécurité 24/7, HD Connect services",
     canonicalUrl: "https://hdconnect.fr/services",
   });
 
@@ -181,7 +181,7 @@ const ServicesHub = () => {
     {
       step: "02",
       title: "Devis Détaillé",
-      description: "Proposition chiffrée transparente sous 48h avec le détail des équipements, main d'œuvre et garanties incluses.",
+      description: "Proposition chiffrée transparente rapidement avec le détail des équipements, main d'œuvre et garanties incluses.",
       icon: FileCheck,
       color: "from-emerald-500 to-green-500"
     },
@@ -797,7 +797,7 @@ const ServicesHub = () => {
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
                     Notre réseau de techniciens couvre l'ensemble du territoire français. 
-                    Présence renforcée en <strong>Île-de-France</strong> pour des interventions rapides sous 48h.
+                    Présence renforcée en <strong>Île-de-France</strong> pour des interventions rapides rapidement.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="p-4 rounded-xl bg-card border border-border">

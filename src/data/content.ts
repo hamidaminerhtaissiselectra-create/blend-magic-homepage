@@ -28,8 +28,8 @@ export const content = {
 
   // --- Section Hero ---
   hero: {
-    title: "Sécurité Intelligente pour Particuliers et Professionnels",
-    subtitle: "Vidéosurveillance, Alarmes et Contrôle d'Accès. Installation, Dépannage et Location en Île-de-France et Grandes Villes.",
+    title: "Expert Sécurité 2025-2026 : Solutions Intelligentes & IA",
+    subtitle: "Vidéosurveillance IA 4K, Alarmes NF&A2P et Contrôle d'Accès Biométrique. Installation, Dépannage Urgence 4h et Location 24/7 en Île-de-France et Grandes Villes. Visez le Top 3 Sécurité.",
     ctaQuote: "Demander un Devis Gratuit",
     ctaContact: "Contactez-nous",
   },
@@ -98,10 +98,10 @@ export const content = {
 
   // --- Section À Propos ---
   about: {
-    title: "HD Connect : L'Expertise Sécurité à Votre Service",
+    title: "HD Connect : Expert Sécurité 2025-2026 & Technologies IA",
     content: [
-      "Fort d'une décennie d'expérience dans le domaine de la sécurité électronique, HD Connect s'est imposé comme un partenaire de confiance pour les particuliers et les professionnels. Notre mission est de vous fournir des solutions de sécurité sur mesure, alliant les dernières technologies à une installation irréprochable, pour une tranquillité d'esprit totale.",
-      "Notre équipe d'experts est dédiée à l'installation, la maintenance et le dépannage de systèmes de vidéosurveillance, d'alarmes et de contrôle d'accès. Basés en Île-de-France, nous intervenons rapidement à Paris et dans les grandes métropoles pour répondre à tous vos besoins de sécurité, que vous soyez un particulier soucieux de protéger sa famille ou un professionnel désireux de sécuriser ses locaux.",
+      "Fort d'une décennie d'expérience, HD Connect est votre partenaire expert en sécurité électronique 2025-2026. Nous concevons des solutions sur mesure intégrant l'Intelligence Artificielle pour une protection proactive des particuliers et des professionnels. Notre mission : allier innovation technologique et fiabilité opérationnelle.",
+      "Nos techniciens certifiés assurent l'installation, la maintenance et le dépannage express de systèmes de vidéosurveillance IA, d'alarmes NF&A2P et de contrôle d'accès biométrique. Basés en Île-de-France, nous garantissons une intervention rapide pour les urgences à Paris et dans les grandes métropoles françaises.",
     ],
     stats: [
       { value: "10+", label: "Années d'Expérience" },
@@ -178,7 +178,7 @@ export const content = {
     },
     maintenance: {
       title: "Maintenance et Dépannage Express",
-      description: "La maintenance est essentielle pour la pérennité de votre investissement. Nous proposons des contrats de maintenance préventive annuels pour vérifier, nettoyer et mettre à jour vos systèmes. En cas de panne, notre service de dépannage express intervient sous 24h en Île-de-France pour minimiser les temps d'arrêt de votre sécurité.",
+      description: "La maintenance est essentielle pour la pérennité de votre investissement. Nous proposons des contrats de maintenance préventive annuels pour vérifier, nettoyer et mettre à jour vos systèmes. En cas de panne, notre service de dépannage express intervient rapidement en Île-de-France pour minimiser les temps d'arrêt de votre sécurité.",
       features: [
         "Contrats de maintenance annuels",
         "Intervention d'urgence 24/7",
@@ -189,7 +189,7 @@ export const content = {
         { question: "La maintenance est-elle obligatoire pour mon système de sécurité ?", answer: "Pour les ERP (Établissements Recevant du Public) et certaines installations professionnelles, oui légalement. Pour les particuliers, elle est fortement recommandée pour maintenir la garantie et les performances optimales." },
         { question: "Que comprend une visite de maintenance préventive ?", answer: "Test complet de tous les équipements (caméras, détecteurs, centrale), nettoyage des optiques, vérification des connexions et câblages, mise à jour des firmwares, test de la batterie de secours et rapport détaillé." },
         { question: "Puis-je souscrire un contrat pour une installation réalisée par un autre installateur ?", answer: "Oui, après un audit technique initial (gratuit) pour évaluer l'état de votre système et définir le contrat adapté. Nous sommes compatibles avec la plupart des marques du marché." },
-        { question: "Que se passe-t-il en cas de panne hors heures ouvrées ?", answer: "Les contrats Premium et Enterprise incluent une astreinte 24/7 avec intervention sous 4h même les nuits, week-ends et jours fériés en Île-de-France. Pour la province, intervention sous 8h à 24h." },
+        { question: "Que se passe-t-il en cas de panne hors heures ouvrées ?", answer: "Les contrats Premium et Enterprise incluent une astreinte 24/7 avec intervention rapide même les nuits, week-ends et jours fériés en Île-de-France. Pour la province, intervention sous 8h à 24h." },
         { question: "Les pièces de rechange sont-elles incluses dans le contrat ?", answer: "Selon la formule choisie : le contrat Essentiel inclut la main d'œuvre uniquement, le Premium inclut les pièces d'usure courante, et l'Enterprise inclut toutes les pièces avec stock dédié." },
         { question: "Proposez-vous la télémaintenance ?", answer: "Oui, pour les systèmes connectés nous pouvons diagnostiquer à distance de nombreuses pannes, effectuer des mises à jour et régler des problèmes de configuration sans déplacement, réduisant les délais d'intervention." },
         { question: "Comment est calculé le coût du contrat de maintenance ?", answer: "Le tarif dépend du nombre d'équipements, de la complexité du système et du niveau de service souhaité (délai d'intervention, disponibilité du support). Nous proposons des devis sur mesure après audit." },

@@ -59,12 +59,12 @@ const CTAIntermediate = ({
     : "bg-secondary/50";
 
   // Bénéfices à afficher
-  const benefits = [
-    { icon: CheckCircle, text: "Devis gratuit sous 24h" },
-    { icon: Clock, text: "Intervention rapide" },
-    { icon: Shield, text: "Garantie 5 ans" },
-    { icon: Gift, text: "Audit offert" },
-  ];
+	  const benefits = [
+	    { icon: CheckCircle, text: "Devis gratuit rapidement" },
+	    { icon: Clock, text: "Intervention Rapide Urgence" },
+	    { icon: Shield, text: "Garantie 5 ans" },
+	    { icon: Gift, text: "Audit offert" },
+	  ];
 
   return (
     <section className={`py-12 md:py-16 ${bgClass} relative overflow-hidden`}>
@@ -180,7 +180,7 @@ const CTAIntermediate = ({
 
             {/* Texte de réassurance */}
             <p className={`mt-6 text-sm ${isGradient ? 'text-white/70' : 'text-muted-foreground'}`}>
-              ✓ Sans engagement • ✓ Réponse sous 24h • ✓ Techniciens certifiés
+              ✓ Sans engagement • ✓ Réponse rapidement • ✓ Techniciens certifiés
             </p>
           </div>
         </AnimatedSection>

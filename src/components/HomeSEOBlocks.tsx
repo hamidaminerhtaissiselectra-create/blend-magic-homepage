@@ -74,8 +74,8 @@ export const SolutionsBlock = () => {
 export const ExpertiseBlock = () => {
   const certifications = [
     { label: "Techniciens certifiés", value: "100%" },
-    { label: "Conformité RGPD", value: "Garantie" },
-    { label: "Délai intervention", value: "< 48h" },
+	    { label: "Conformité RGPD/CNIL", value: "Garantie" },
+	    { label: "Délai intervention rapide", value: "Urgence" },
     { label: "Satisfaction client", value: "98%" },
   ];
 
@@ -89,7 +89,7 @@ export const ExpertiseBlock = () => {
               Expertise Technique et Conformité Réglementaire
             </h2>
             <p className="text-muted-foreground">
-              Tous nos systèmes sont installés dans le respect des normes en vigueur et des réglementations CNIL/RGPD. Nos techniciens sont formés en continu aux dernières technologies et certifiés par les plus grandes marques du secteur (Hikvision, Dahua, Axis, Ajax, Honeywell).
+	            Tous nos systèmes sont installés dans le respect des normes en vigueur (NF&A2P, APSAD P3) et des réglementations CNIL/RGPD. Nos techniciens sont formés en continu aux dernières technologies d'<strong>Intelligence Artificielle (IA)</strong> et certifiés par les plus grandes marques du secteur (Hikvision, Dahua, Axis, Ajax, Honeywell). Cette expertise est la clé de notre positionnement Top 3 en 2025-2026.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

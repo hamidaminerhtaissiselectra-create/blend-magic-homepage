@@ -23,10 +23,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 const trustBadges = [
-  { icon: BadgeCheck, label: "Certifié NF&A2P", description: "Référence assureurs" },
-  { icon: Award, label: "10+ ans d'expertise", description: "Techniciens certifiés" },
-  { icon: Shield, label: "Garantie 5 ans", description: "Pièces et main d'œuvre" },
-  { icon: Clock, label: "Support 24/7", description: "Intervention rapide" },
+  { icon: BadgeCheck, label: "Certifié NF&A2P & APSAD", description: "Conformité Assurance & Normes 2025-2026" },
+  { icon: Award, label: "10+ ans d'expertise", description: "Techniciens Certifiés & Formés IA" },
+  { icon: Shield, label: "Garantie 5 ans", description: "Pièces et Main d'Œuvre Incluses" },
+	  { icon: Clock, label: "Intervention Rapide", description: "Dépannage 24/7 en Île-de-France" },
 ];
 
 const Footer = () => {
@@ -65,8 +65,8 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">Prêt à sécuriser vos locaux ?</h3>
-              <p className="text-background/70">Obtenez votre devis gratuit en moins de 24h</p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-2">Expert Sécurité 2025-2026 : Prêt à protéger vos locaux ?</h3>
+            <p className="text-background/70">Audit gratuit et devis personnalisé rapidement pour votre installation intelligente.</p>
             </div>
             <Button
               size="lg"
@@ -136,48 +136,31 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Liens Utiles</h4>
+            <h4 className="font-bold text-lg mb-6">Zones d'Intervention</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-background/70 hover:text-primary text-sm transition-colors">
-                  Accueil
+                <Link to="/zones-intervention/ile-de-france" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  Sécurité Île-de-France
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-background/70 hover:text-primary text-sm transition-colors"
-                >
-                  Services
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-background/70 hover:text-primary text-sm transition-colors"
-                >
-                  À Propos
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("quote", { mode: "quote" })}
-                  className="text-background/70 hover:text-primary text-sm transition-colors"
-                >
-                  Demander un Devis
-                </button>
-              </li>
-              <li>
-                <Link to="/mentions-legales" className="text-background/70 hover:text-primary text-sm transition-colors">
-                  Mentions Légales
+                <Link to="/villes/paris" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  Vidéosurveillance Paris
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/politique-confidentialite"
-                  className="text-background/70 hover:text-primary text-sm transition-colors"
-                >
-                  Politique de Confidentialité
+                <Link to="/zones-intervention/auvergne-rhone-alpes" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  Alarme Lyon & Rhône-Alpes
+                </Link>
+              </li>
+              <li>
+                <Link to="/zones-intervention/provence-alpes-cote-d-azur" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  Sécurité Marseille & PACA
+                </Link>
+              </li>
+              <li>
+                <Link to="/zones-intervention" className="text-background/70 hover:text-primary text-sm transition-colors font-medium">
+                  Toutes nos zones d'intervention
                 </Link>
               </li>
             </ul>
@@ -215,7 +198,7 @@ const Footer = () => {
                   >
                     {contactInfo.email}
                   </a>
-                  <span className="text-xs text-background/50 block">Réponse sous 24h</span>
+                  <span className="text-xs text-background/50 block">Réponse rapidement</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">

@@ -51,9 +51,9 @@ const CityServicePage = ({ city }: CityServicePageProps) => {
   const regionCities = getCitiesByRegion(city.region).filter(c => c.slug !== city.slug).slice(0, 4);
 
   useSEO({
-    title: `Installation Sécurité ${city.name} (${city.departmentCode}) | Vidéosurveillance, Alarme, Domotique | HD Connect`,
-    description: `Expert sécurité ${city.name} : vidéosurveillance HD, alarmes certifiées, contrôle d'accès, domotique, réseau, maintenance 24/7. Intervention rapide ${city.department}. Devis gratuit.`,
-    keywords: `sécurité ${city.name}, vidéosurveillance ${city.name}, alarme ${city.name}, domotique ${city.name}, contrôle accès ${city.name}, installation caméra ${city.departmentCode}, HD Connect ${city.region}`,
+    title: `Expert Sécurité 2025-2026 ${city.name} (${city.departmentCode}) | Vidéosurveillance & Alarme IA | HD Connect`,
+    description: `Expert sécurité 2025-2026 à ${city.name} : vidéosurveillance IA 4K, alarmes NF&A2P, contrôle d'accès biométrique et domotique intelligente. Intervention rapidement en ${city.department}. Devis gratuit.`,
+    keywords: `sécurité ${city.name} 2025-2026, vidéosurveillance ${city.name}, alarme ${city.name}, domotique ${city.name}, contrôle accès ${city.name}, installation caméra IA ${city.departmentCode}, HD Connect ${city.region}`,
     canonicalUrl: `https://hdconnect.fr/villes/${city.slug}`,
   });
 
@@ -105,7 +105,7 @@ const CityServicePage = ({ city }: CityServicePageProps) => {
       title: "Maintenance 24/7",
       description: `Maintenance et dépannage express à ${city.name}. Contrats préventifs, intervention rapide garantie.`,
       link: "/services/maintenance",
-      features: ["Contrats annuels", "Intervention 24h", "Pièces garanties", "Support téléphonique"]
+      features: ["Contrats annuels", "Intervention Rapide", "Pièces garanties", "Support téléphonique"]
     },
     {
       icon: Radio,
@@ -146,9 +146,9 @@ const CityServicePage = ({ city }: CityServicePageProps) => {
   ];
 
   const advantages = [
-    { icon: Clock, title: "Intervention 24-48h", description: `Nos techniciens interviennent sous 24 à 48h à ${city.name} et dans tout le ${city.department}.` },
+    { icon: Clock, title: "Intervention Rapide", description: `Nos techniciens interviennent rapidement à ${city.name} et dans tout le ${city.department}.` },
     { icon: Award, title: "Expertise Certifiée", description: "Techniciens formés et certifiés par les plus grandes marques du secteur de la sécurité." },
-    { icon: Zap, title: "Devis Gratuit", description: `Étude personnalisée et devis détaillé sous 24h pour votre projet à ${city.name}.` },
+    { icon: Zap, title: "Devis Gratuit", description: `Étude personnalisée et devis détaillé rapidement pour votre projet à ${city.name}.` },
     { icon: Users, title: "Support 24/7", description: "Interlocuteur unique et support technique disponible 24/7 par téléphone." }
   ];
 
@@ -244,7 +244,7 @@ const CityServicePage = ({ city }: CityServicePageProps) => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Sécurité & Domotique à <span className="text-primary">{city.name}</span>
+              Expert Sécurité 2025-2026 à <span className="text-primary">{city.name}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
