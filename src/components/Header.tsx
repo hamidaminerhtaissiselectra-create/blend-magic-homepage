@@ -55,12 +55,12 @@ const Header = () => {
                 </Link>
               ) : (
                 <button
-	                  key={link.id}
-	                  onClick={() => handleNavClick(link.id)}
-	                  className={`text-foreground hover:text-primary transition-colors ${link.isUrgency ? 'font-bold text-red-600 hover:text-red-700' : ''}`}
-	                >
-	                  {link.label}
-	                </button>
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
               )
             ))}
           </nav>

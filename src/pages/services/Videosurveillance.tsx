@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { content } from "@/data/content";
-import { Camera, Shield, Smartphone, Cloud, Eye, Clock, CheckCircle, Zap, HardHat, Settings, MapPin, Building, Home as HomeIcon, Factory, Store, Video, Server, Wifi, Lock, Users, Award, Phone, MessageSquare, AlertTriangle, TrendingUp, FileCheck, Lightbulb } from "lucide-react";
+import { Camera, Shield, Smartphone, Cloud, Eye, Clock, CheckCircle, Zap, HardHat, Settings, MapPin, Building, Home as HomeIcon, Factory, Store, Video, Server, Wifi, Lock, Users, Award, Phone, MessageSquare, AlertTriangle, TrendingUp, FileCheck, Lightbulb, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -178,27 +178,45 @@ const Videosurveillance = () => {
               <p>
                 Cette <strong>sécurité proactive par IA</strong> permet non seulement de filmer, mais surtout d'anticiper les menaces grâce au franchissement de ligne virtuelle et à la détection d'intrusion périmétrique intelligente.
               </p>
-              <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                <div class="p-5 bg-blue-50 rounded-xl border border-blue-100">
-                  <p class="text-blue-900 font-semibold mb-2">Couplage Alarme</p>
-                  <p class="text-blue-800/70 text-xs mb-4">Renforcez votre protection avec une alarme certifiée NF&A2P.</p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl border border-blue-200/50 dark:border-blue-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
+                      <Bell className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-blue-900 dark:text-blue-100 font-bold">Couplage Alarme</p>
+                  </div>
+                  <p className="text-blue-800/70 dark:text-blue-200/70 text-xs mb-4">Renforcez votre protection avec une alarme certifiée NF&A2P.</p>
                   <Link to="/services/alarme">
-                    <Button variant="outline" size="sm" className="w-full border-blue-200 hover:bg-blue-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Voir les Alarmes
                       <Bell className="ml-2 w-3 h-3 group-hover:rotate-12 transition-transform" />
                     </Button>
                   </Link>
-                </div>
-                <div class="p-5 bg-cyan-50 rounded-xl border border-cyan-100">
-                  <p class="text-cyan-900 font-semibold mb-2">Gestion des Accès</p>
-                  <p class="text-cyan-800/70 text-xs mb-4">Contrôlez les entrées avec la biométrie et le cloud.</p>
+                </motion.div>
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-950/30 dark:to-teal-950/30 rounded-2xl border border-cyan-200/50 dark:border-cyan-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+                      <Lock className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-bold">Gestion des Accès</p>
+                  </div>
+                  <p className="text-cyan-800/70 dark:text-cyan-200/70 text-xs mb-4">Contrôlez les entrées avec la biométrie et le cloud.</p>
                   <Link to="/services/controle-acces">
-                    <Button variant="outline" size="sm" className="w-full border-cyan-200 hover:bg-cyan-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Contrôle d'Accès
                       <Lock className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
                     </Button>
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </>
           }

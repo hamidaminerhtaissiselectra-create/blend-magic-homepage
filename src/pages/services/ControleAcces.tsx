@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { content } from "@/data/content";
-import { Lock, Fingerprint, CreditCard, History, Users, Key, CheckCircle, Zap, HardHat, Settings, MapPin, Building, Home, Factory, Shield, Phone, MessageSquare, Award, Clock, Scan, DoorOpen } from "lucide-react";
+import { Lock, Fingerprint, CreditCard, History, Users, Key, CheckCircle, Zap, HardHat, Settings, MapPin, Building, Home, Factory, Shield, Phone, MessageSquare, Award, Clock, Scan, DoorOpen, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
@@ -175,27 +175,45 @@ const ControleAcces = () => {
               <p>
                 De l'interphone vidéo IP à la gestion biométrique, nous vous garantissons une installation conforme aux normes en vigueur et un service de maintenance réactif. En cas de panne critique, notre service d'urgence vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
-              <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-100">
-                  <p class="text-emerald-900 font-semibold mb-2">Vidéosurveillance IA</p>
-                  <p class="text-emerald-800/70 text-xs mb-4">Identifiez visuellement chaque accès avec nos caméras 4K.</p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 rounded-2xl border border-emerald-200/50 dark:border-emerald-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center">
+                      <Camera className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-emerald-900 dark:text-emerald-100 font-bold">Vidéosurveillance IA</p>
+                  </div>
+                  <p className="text-emerald-800/70 dark:text-emerald-200/70 text-xs mb-4">Identifiez visuellement chaque accès avec nos caméras 4K.</p>
                   <Link to="/services/videosurveillance">
-                    <Button variant="outline" size="sm" className="w-full border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Voir la Vidéo IA
                       <Camera className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
                     </Button>
                   </Link>
-                </div>
-                <div class="p-5 bg-teal-50 rounded-xl border border-teal-100">
-                  <p class="text-teal-900 font-semibold mb-2">Maison Connectée</p>
-                  <p class="text-teal-800/70 text-xs mb-4">Pilotez vos accès et votre confort depuis une interface unique.</p>
+                </motion.div>
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/30 dark:to-cyan-950/30 rounded-2xl border border-teal-200/50 dark:border-teal-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center">
+                      <Home className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-teal-900 dark:text-teal-100 font-bold">Maison Connectée</p>
+                  </div>
+                  <p className="text-teal-800/70 dark:text-teal-200/70 text-xs mb-4">Pilotez vos accès et votre confort depuis une interface unique.</p>
                   <Link to="/services/domotique">
-                    <Button variant="outline" size="sm" className="w-full border-teal-200 hover:bg-teal-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Domotique Smart
                       <Home className="ml-2 w-3 h-3 group-hover:translate-y-[-2px] transition-transform" />
                     </Button>
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </>
           }
