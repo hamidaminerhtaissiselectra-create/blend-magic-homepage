@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { content } from "@/data/content";
-import { Home, Smartphone, Zap, Sun, Thermometer, Clock, CheckCircle, HardHat, Settings, MapPin, Lightbulb, Wifi, Lock, Users, Award, Phone, MessageSquare, Building, Store, Factory } from "lucide-react";
+import { Home, Smartphone, Zap, Sun, Thermometer, Clock, CheckCircle, HardHat, Settings, MapPin, Lightbulb, Wifi, Lock, Users, Award, Phone, MessageSquare, Building, Store, Factory, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
@@ -169,27 +169,45 @@ const Domotique = () => {
               <p>
                 Notre approche privilégie le <strong>contrôle local de vos données</strong>. Contrairement aux solutions cloud propriétaires, nos systèmes fonctionnent avec un serveur domotique chez vous, garantissant votre indépendance et la pérennité de votre investissement. En cas de dysfonctionnement, notre service de maintenance vous assure une **intervention sur site Urgence** en Île-de-France.
               </p>
-              <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                <div class="p-5 bg-purple-50 rounded-xl border border-purple-100">
-                  <p class="text-purple-900 font-semibold mb-2">Sécurité Intégrée</p>
-                  <p class="text-purple-800/70 text-xs mb-4">Automatisez votre alarme avec vos scénarios de vie.</p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-purple-50 to-fuchsia-50 dark:from-purple-950/30 dark:to-fuchsia-950/30 rounded-2xl border border-purple-200/50 dark:border-purple-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-fuchsia-500 flex items-center justify-center">
+                      <ShieldAlert className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-purple-900 dark:text-purple-100 font-bold">Sécurité Intégrée</p>
+                  </div>
+                  <p className="text-purple-800/70 dark:text-purple-200/70 text-xs mb-4">Automatisez votre alarme avec vos scénarios de vie.</p>
                   <Link to="/services/alarme">
-                    <Button variant="outline" size="sm" className="w-full border-purple-200 hover:bg-purple-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Voir les Alarmes
                       <ShieldAlert className="ml-2 w-3 h-3 group-hover:scale-110 transition-transform" />
                     </Button>
                   </Link>
-                </div>
-                <div class="p-5 bg-violet-50 rounded-xl border border-violet-100">
-                  <p class="text-violet-900 font-semibold mb-2">Accès Connectés</p>
-                  <p class="text-violet-800/70 text-xs mb-4">Ouvrez votre porte à distance via votre système domotique.</p>
+                </motion.div>
+                <motion.div 
+                  className="p-5 bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-950/30 dark:to-indigo-950/30 rounded-2xl border border-violet-200/50 dark:border-violet-800/30 shadow-md"
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center">
+                      <Lock className="w-4 h-4 text-white" />
+                    </div>
+                    <p className="text-violet-900 dark:text-violet-100 font-bold">Accès Connectés</p>
+                  </div>
+                  <p className="text-violet-800/70 dark:text-violet-200/70 text-xs mb-4">Ouvrez votre porte à distance via votre système domotique.</p>
                   <Link to="/services/controle-acces">
-                    <Button variant="outline" size="sm" className="w-full border-violet-200 hover:bg-violet-500 hover:text-white transition-all group">
+                    <Button size="sm" className="w-full bg-gradient-to-r from-violet-500 to-indigo-500 hover:from-violet-600 hover:to-indigo-600 text-white shadow-md hover:shadow-lg transition-all group">
                       Contrôle d'Accès
                       <Lock className="ml-2 w-3 h-3 group-hover:translate-y-[-2px] transition-transform" />
                     </Button>
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </>
           }

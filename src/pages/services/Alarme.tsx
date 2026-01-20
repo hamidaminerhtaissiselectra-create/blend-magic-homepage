@@ -166,18 +166,30 @@ const Alarme = () => {
               <p>
                 Enfin, pour une protection complète, HD Connect propose une connexion à un centre de <strong>Télésurveillance APSAD 24/7</strong>. En cas d'alerte confirmée, nous garantissons l'appel des forces de l'ordre et une <strong>intervention sur site Urgence</strong>, assurant une réactivité maximale et une tranquillité d'esprit totale.
               </p>
-              <div class="mt-6 p-6 bg-red-50 rounded-xl border border-red-100">
-                <p class="text-red-900 font-semibold mb-3">Complétez votre sécurité</p>
-                <p class="text-red-800/80 text-sm mb-4">
+              <motion.div 
+                className="mt-8 p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/30 dark:to-orange-950/30 rounded-2xl border border-red-200/50 dark:border-red-800/30 shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-md">
+                    <Eye className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-red-900 dark:text-red-100 font-bold text-lg">Complétez votre sécurité</p>
+                </div>
+                <p className="text-red-800/80 dark:text-red-200/80 text-sm mb-4 leading-relaxed">
                   Pour une levée de doute visuelle encore plus performante, découvrez comment nos systèmes de caméras intelligentes s'interfacent avec votre alarme.
                 </p>
                 <Link to="/services/videosurveillance">
-                  <Button variant="outline" className="border-red-200 hover:bg-red-500 hover:text-white transition-all group">
+                  <Button className="w-full sm:w-auto bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 group">
                     Découvrir la Vidéosurveillance IA
                     <Eye className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                   </Button>
                 </Link>
-              </div>
+              </motion.div>
             </>
           }
           delay={0}
